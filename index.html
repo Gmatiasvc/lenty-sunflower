@@ -3,43 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/css/tailwind.css" />
     <title>Document</title>
   </head>
 
   <body>
-    <div class="min-h-screen flex flex-col">
-      <header class="bg-gray-800 text-white p-4">
-        <h1 class="text-2xl">Gerardo Venegas</h1>
-      </header>
-      <main class="flex-grow p-4">
-        <p class="text-lg">Welcome to my personal webpage!</p>
-      </main>
-      <footer
-        class="bg-gray-800 text-white p-4 text-center mt-auto grid grid-cols-5 gap-3"
-      >
-        <div class="bg-amber-200"></div>
-        <a href="https://www.instagram.com/gerarditochiquitito">
-          <div class="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 flex rounded-xs h-7" href="">
-            <img
-              src="svg/instagram.svg"
-              alt=""
-              class="h-5 self-center justify-center ml-auto mr-auto"
-            />
-            <p class="mr-auto ml-auto self-center">Instagram</p>
-          </div>
-        </a>
-        <a href="https://github.com/Gmatiasvc">
-          <div class="bg-amber-700">Github</div>
-        </a>
-        <a href="">
-          <div class="bg-amber-500">About</div>
+    <nav class="bg-gray-800 text-white p-4 fixed w-full h-16">
+      <h1 class="text-2xl">Gerardo Venegas</h1>
+    </nav>
 
-        </a>
-        <a href="">
-          <div class="bg-rose-200">&lt;3</div>
-        </a>
-      </footer>
-    </div>
+    <main
+      class="antialiased h-screen snap-y snap-mandatory overflow-y-scroll scroll-pt-16"
+    >
+      <section id="hero" class="snap-center">
+        <div class="bg-red-400 p-5 grid grid-cols-2 h-screen items-center-safe">
+          <div class="bg-red-500 m-3 p-2">
+            <div class="bg-red-600 m-2">GERARDO</div>
+            <div class="bg-red-600 m-2">DEVELOPER IN TRAINING</div>
+            <div class="bg-red-600 m-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              laudantium sequi dolores fuga consectetur doloribus, voluptas,
+              pariatur rem earum reprehenderit atque ex possimus magnam
+              assumenda veniam. Commodi expedita voluptas hic.
+            </div>
+            <div class="bg-red-600 flex m-4">
+              <div class="bg-red-700 m-2">CONTACT</div>
+              <div class="bg-red-700 m-2">ABOUT</div>
+            </div>
+          </div>
+          <div class="bg-red-300 m-3 flex justify-center">
+            <img
+              src="https://placehold.co/600x400?text=Placeholder\nImage"
+              alt="Un placeholder"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="snap-center">
+        <div class="bg-blue-400 p-5 h-screen">ABOUT</div>
+      </section>
+
+      <section id="personal" class="snap-center">
+        <div class="bg-rose-400 p-5 h-screen">PERSONAL</div>
+      </section>
+
+      <section id="skills" class="snap-center">
+        <div class="bg-green-400 p-5 h-screen">SKILLS</div>
+      </section>
+
+      <section id="career" class="snap-center">
+        <div class="bg-amber-400 p-5 h-screen">CAREER</div>
+      </section>
+
+      <section id="portfolio" class="snap-center">
+        <div class="bg-indigo-400 p-5 h-screen">PERSONAL</div>
+      </section>
+
+      <section id="blog" class="snap-center">
+        <div class="bg-lime-400 p-5 h-screen">BLOG</div>
+      </section>
+
+      <section id="contact" class="snap-center">
+        <div class="bg-violet-400 p-5 h-screen">CONTACT</div>
+      </section>
+
+      <section id="footer" class="snap-center">
+        <div class="bg-gray-800 text-white p-5">FOOTER</div>
+      </section>
+    </main>
   </body>
 </html>
