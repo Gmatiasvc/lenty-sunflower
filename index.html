@@ -5,11 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/tailwind.css" />
     <title>lenty-sunflower</title>
+
+    <style>
+      main {
+        scrollbar-width: none;
+      }
+      main {
+        -ms-overflow-style: none;
+      }
+      main::-webkit-scrollbar,
+      main::-webkit-scrollbar-button {
+        display: none;
+      }
+      main::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+    </style>
   </head>
 
   <body>
-    <nav class="bg-gray-800 text-white p-4 fixed w-full h-16">
-      <h1 class="text-2xl">Gerardo Venegas</h1>
+    <nav class="bg-gray-800 text-white p-4 fixed w-full h-16 flex items-center">
+      <div class="mr-auto">
+        <h1 class="text-2xl font-bold">Gerardo Venegas</h1>
+      </div>
+
+      <div class="flex space-x-6">
+        <div><a href="#hero">Home</a></div>
+        <div><a href="#about">About</a></div>
+        <div><a href="#personal">Personal</a></div>
+        <div><a href="#skills">Skills</a></div>
+        <div><a href="#career">Career</a></div>
+        <div><a href="#contact">Contact</a></div>
+        <div><a href="#">Curriculum</a></div>
+      </div>
     </nav>
 
     <main
@@ -20,11 +49,18 @@
           <div class="bg-red-500 m-3 p-2">
             <div class="bg-red-600 m-2">GERARDO</div>
             <div class="bg-red-600 m-2">DEVELOPER IN TRAINING</div>
-            <div class="bg-red-600 m-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              laudantium sequi dolores fuga consectetur doloribus, voluptas,
-              pariatur rem earum reprehenderit atque ex possimus magnam
-              assumenda veniam. Commodi expedita voluptas hic.
+            <div class="bg-red-200 m-2">
+              LEEER: Actualmente solo encontrará el layout que seguirá la
+              pagina. Estilos y contenidos no estan listos. Puede encontrar el
+              código en el repositorio:
+              <a href="https://github.com/Gmatiasvc/lenty-sunflower" class="text-blue-900"
+                >https://github.com/Gmatiasvc/lenty-sunflower</a
+              >
+              y la pagina web está en vivo en
+              <a href="https://gmatiasvc.github.io/lenty-sunflower" class="text-blue-900"
+                >https://gmatiasvc.github.io/lenty-sunflower</a
+              >
+              mediante el uso de github pages.
             </div>
             <div class="bg-red-600 flex m-4">
               <div class="bg-red-700 m-2">CONTACT</div>
