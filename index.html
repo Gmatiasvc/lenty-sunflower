@@ -45,7 +45,7 @@
       class="antialiased h-screen snap-y snap-mandatory overflow-y-scroll scroll-pt-16"
     >
       <section id="hero" class="snap-center">
-        <div class="bg-red-400 p-5 grid grid-cols-2 h-screen items-center-safe">
+        <div class="bg-red-400 p-5 md:grid md:grid-cols-2 flex flex-col h-screen items-center-safe">
           <div class="bg-red-500 m-3 p-2">
             <div class="bg-red-600 m-2">GERARDO</div>
             <div class="bg-red-600 m-2">DEVELOPER IN TRAINING</div>
@@ -78,7 +78,7 @@
 
       <section id="about" class="snap-center">
         <div
-          class="bg-blue-400 p-5 grid grid-cols-2 h-screen items-center-safe"
+          class="bg-blue-400 p-5 md:grid md:grid-cols-2 flex flex-col h-screen items-center-safe"
         >
           <div class="bg-blue-500 m-3 p-2">
             <div class="bg-blue-600 m-2">
@@ -102,8 +102,8 @@
 
       <section id="personal" class="snap-center">
         <div class="bg-rose-400 p-0 h-screen flex">
-          <div class="bg-rose-500 w-48">deco</div>
-          <div class="bg-rose-500 m-4 ml-9mt-12 p-2 w-72">fam img</div>
+          <div class="bg-rose-500 w-48 hidden md:flex">deco</div>
+          <div class="bg-rose-500 m-4 ml-9mt-12 p-2 w-72 hidden lg:flex">fam img</div>
 
           <div class="bg-rose-500 m-4 mt-12 p-2 flex-1">
             FAMILIA Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -112,14 +112,14 @@
             culpa illo ullam. Nulla.
           </div>
 
-          <div class="bg-rose-500 m-4 mr-9 mt-12 p-2 w-72">social</div>
-          <div class="bg-rose-500 w-48">deco</div>
+          <div class="bg-rose-500 m-4 mr-9 mt-12 p-2 w-72 hidden lg:flex">social</div>
+          <div class="bg-rose-500 w-48 hidden md:flex">deco</div>
         </div>
       </section>
 
       <section id="skills" class="snap-center">
         <div
-          class="bg-green-400 p-5 grid grid-cols-2 h-screen items-center-safe"
+          class="bg-green-400 p-5 md:grid md:grid-cols-2 flex flex-col h-screen items-center-safe"
         >
           <div class="bg-green-500 m-3 p-2">
             <div class="bg-green-600 m-2">skills</div>
@@ -174,9 +174,9 @@
         <div class="bg-lime-400 p-5 h-screen">BLOG</div>
       </section>
 			-->
-      <section id="contact" class="snap-center">
+      <section id="contact" class="snap-start">
         <div
-          class="bg-violet-400 p-5 grid grid-cols-2 h-screen items-center-safe"
+          class="bg-violet-400 p-5 md:grid md:grid-cols-2 flex flex-col h-screen items-center-safe"
         >
           <div class="bg-violet-500 m-3 p-2">
             <div class="bg-violet-600 m-2">Contact</div>
