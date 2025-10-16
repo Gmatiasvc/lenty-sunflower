@@ -26,11 +26,15 @@
 
   <body>
     <nav class="bg-gray-800 text-white p-4 fixed w-full h-16 flex items-center">
-      <div class="mr-auto">
+      <div class="mr-auto hidden sm:flex">
         <h1 class="text-2xl font-bold">Gerardo Venegas</h1>
       </div>
+      <div class="mr-auto flex sm:hidden">
+        <h1 class="text-2xl font-bold">GV</h1>
+      </div>
 
-      <div class="flex space-x-6">
+
+      <div class="hidden space-x-6 sm:flex">
         <div><a href="#hero">Home</a></div>
         <div><a href="#about">About</a></div>
         <div><a href="#personal">Personal</a></div>
@@ -102,8 +106,8 @@
 
       <section id="personal" class="snap-center">
         <div class="bg-rose-400 p-0 h-screen flex">
-          <div class="bg-rose-500 w-48 hidden md:flex">deco</div>
-          <div class="bg-rose-500 m-4 ml-9mt-12 p-2 w-72 hidden lg:flex">fam img</div>
+          <div class="bg-rose-500 w-36 hidden md:flex">deco</div>
+          <div class="bg-rose-500 m-4 ml-9mt-12 p-2 w-72 hidden xl:flex">fam img</div>
 
           <div class="bg-rose-500 m-4 mt-12 p-2 flex-1">
             FAMILIA Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -112,8 +116,8 @@
             culpa illo ullam. Nulla.
           </div>
 
-          <div class="bg-rose-500 m-4 mr-9 mt-12 p-2 w-72 hidden lg:flex">social</div>
-          <div class="bg-rose-500 w-48 hidden md:flex">deco</div>
+          <div class="bg-rose-500 m-4 mr-9 mt-12 p-2 w-72 hidden xl:flex">social</div>
+          <div class="bg-rose-500 w-36 hidden md:flex">deco</div>
         </div>
       </section>
 
@@ -145,7 +149,7 @@
       </section>
 
       <section id="career" class="snap-center">
-        <div class="bg-amber-400 p-5 grid h-screen items-center-safe">
+        <div class="bg-amber-400 p-5 flex h-screen items-center-safe">
           <div class="bg-amber-500 m-3 p-2">
             <div class="bg-amber-600 m-2 p-2">CAREER</div>
             <div class="bg-amber-600 m-2 p-2">
@@ -158,9 +162,9 @@
             <div class="bg-amber-600 flex m-4">
               <div class="bg-amber-700 m-2 p-2 flex-2">GITHUB REPO</div>
               <div class="bg-amber-700 m-2 p-2 flex-2">GITHUB REPO</div>
-              <div class="bg-amber-700 m-2 p-2 flex-2">GITHUB REPO</div>
-              <div class="bg-amber-700 m-2 p-2 flex-2">GITHUB REPO</div>
-              <div class="bg-amber-700 m-2 p-2 flex-2">GITHUB REPO</div>
+              <div class="bg-amber-700 m-2 p-2 flex-2 hidden md:flex">GITHUB REPO</div>
+              <div class="bg-amber-700 m-2 p-2 flex-2 hidden md:flex">GITHUB REPO</div>
+              <div class="bg-amber-700 m-2 p-2 flex-2 hidden lg:flex">GITHUB REPO</div>
             </div>
           </div>
         </div>
@@ -169,6 +173,8 @@
       <section id="portfolio" class="snap-center">
         <div class="bg-indigo-400 p-5 h-screen">PERSONAL</div>
       </section>
+
+      
 
       <section id="blog" class="snap-center">
         <div class="bg-lime-400 p-5 h-screen">BLOG</div>
