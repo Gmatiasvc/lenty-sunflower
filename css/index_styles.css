@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+main {
+  scrollbar-width: none;
+}
+main {
+  -ms-overflow-style: none;
+}
+main::-webkit-scrollbar,
+main::-webkit-scrollbar-button {
+  display: none;
+}
+main::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+:root {
+  --color-black-darker: #1c1d21;
+  --color-black: #2F3137;
+  --color-white: #fffcff;
+  --color-red: #a30b37;
+  --color-orange: #D46921;
+  --color-yellow: #e3b505;
+  --color-green: #4AB553;
+  --color-blue: #5AA9E6;
+  --color-purple: #766EA5;
+  
+}
+
+.global-title{
+	color: var(--color-yellow);
+	
+
+}
+
+/* https://coolors.co/1c1d21-fffcff-5aa9e6-e3b505-a30b37 */
+.navbar-background {
+	background-color: var(--color-black-darker);
+	height: 7vh;
+}
+
+.navbar-font {
+	color: var(--color-white)
+}
+
+.hero-background {
+  background-color: var(--color-black);
+  height: 100vh;
+}
+
+.about-background {
+  background-color: var(--color-black);
+  height: 100vh;
+}
+.personal-background {
+  background-color: var(--color-black);
+  height: 100vh;
+}
+.skills-background {
+  background-color: var(--color-black);
+  height: 100vh;
+}
+.career-background {
+  background-color: var(--color-black);
+  height: 100vh;
+}
+.contact-background {
+  background-color: var(--color-black);
+  height: 100vh;
+}
