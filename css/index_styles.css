@@ -30,8 +30,24 @@ main::-webkit-scrollbar {
 
 .global-title{
 	color: var(--color-yellow);
-	
-
+	font-size: 38px;
+	font-weight: bold;
+}
+.global-title-2{
+	color: var(--color-blue);
+	font-size: larger;
+	font-weight: bold;
+}
+.global-text{
+	color: var(--color-white);
+}
+.global-hyperlink{
+	color: var(--color-blue);
+	font-weight: bold;
+}
+.global-button{
+	color: var(--color-green);
+	font-weight: bold;
 }
 
 /* https://coolors.co/1c1d21-fffcff-5aa9e6-e3b505-a30b37 */
