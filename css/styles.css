@@ -1,0 +1,268 @@
+@import "tailwindcss";
+
+main {
+  scrollbar-width: none;
+}
+main {
+  -ms-overflow-style: none;
+}
+main::-webkit-scrollbar,
+main::-webkit-scrollbar-button {
+  display: none;
+}
+main::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+div {
+  transition: background-color 1.0s ease-in-out, color 1.0s ease-in-out;
+}
+
+nav {
+  transition: background-color 1.0s ease-in-out, color 1.0s ease-in-out;
+}
+
+:root {
+  --color-bg-1: #1c1d21;
+  --color-bg-2: #2f3137;
+  --color-white: #fffcff;
+  --color-red: #a30b37;
+  --color-orange: #d46921;
+  --color-yellow: #e3b505;
+  --color-green: #4ab553;
+  --color-blue: #5aa9e6;
+  --color-purple: #766ea5;
+}
+
+#hero{
+  --dark-white: #cfc9c2;
+  --dark-white-2: #c0caf5;
+  --dark-white-3: #a9b1d6;
+  --dark-white-4: #9aa5ce;
+  --dark-black-4: #565f89;
+  --dark-black-3: #414868;
+  --dark-black-2: #24283b;
+  --dark-black-1: #1a1b26;
+  --dark-red: #f7768e;
+  --dark-orange: #ff9e64;
+  --dark-yellow: #e0af68;
+  --dark-green: #9ece6a;
+  --dark-teal: #73daca;
+  --dark-light-teal: #b4f9f8;
+  --dark-cyan: #2ac3de;
+  --dark-light-blue: #7dcfff;
+  --dark-blue: #7aa2f7;
+  --dark-purple: #bb9af7;
+
+
+  --light-white: #e6e7ed;
+  --light-black-1: #343b58;
+  --light-black-2: #40434f;
+  --light-black-3: #6c6e75;
+  --light-red: #8c4351;
+  --light-orange: #body965027;
+  --light-yellow: #8f5e15;
+  --light-brown: #634f30;
+  --light-green: #385f0d;
+  --light-teal: #33635c;
+  --light-light-teal: #006c86;
+  --light-cyan: #0f4b6e;
+  --light-blue: #2959aa;
+  --light-purple: #5a3e8e;
+}
+
+
+
+#about{
+--dark-black-1: #0c0c0c;
+--dark-black-2: #0c0c0c;
+--dark-blue: #0037da;
+--dark-cyan: #3a96dd;
+--dark-green: #13a10e;
+--dark-purple: #881798;
+--dark-red: #c50f1f;
+--dark-white: #cccccc;
+--dark-yellow: #c19c00;
+--dark-orange: #c19c00;
+--dark-bright-black: #767676;
+--dark-bright-blue: #3b78ff;
+--dark-bright-cyan: #61d6d6;
+--dark-bright-green: #16c60c;
+--dark-bright-purple: #b4009e;
+--dark-bright-red: #e74856;
+--dark-bright-white: #f2f2f2;
+--dark-bright-yellow: #f9f1a5;
+}
+
+#skills{
+  --dark-white: #cfc9c2;
+  --dark-white-2: #c0caf5;
+  --dark-white-3: #a9b1d6;
+  --dark-white-4: #9aa5ce;
+  --dark-black-4: #565f89;
+  --dark-black-3: #414868;
+  --dark-black-2: #24283b;
+  --dark-black-1: #1a1b26;
+  --dark-red: #f7768e;
+  --dark-orange: #ff9e64;
+  --dark-yellow: #e0af68;
+  --dark-green: #9ece6a;
+  --dark-teal: #73daca;
+  --dark-light-teal: #b4f9f8;
+  --dark-cyan: #2ac3de;
+  --dark-light-blue: #7dcfff;
+  --dark-blue: #7aa2f7;
+  --dark-purple: #bb9af7;
+
+
+  --light-white: #e6e7ed;
+  --light-black-1: #343b58;
+  --light-black-2: #40434f;
+  --light-black-3: #6c6e75;
+  --light-red: #8c4351;
+  --light-orange: #body965027;
+  --light-yellow: #8f5e15;
+  --light-brown: #634f30;
+  --light-green: #385f0d;
+  --light-teal: #33635c;
+  --light-light-teal: #006c86;
+  --light-cyan: #0f4b6e;
+  --light-blue: #2959aa;
+  --light-purple: #5a3e8e;
+}
+
+
+#career{
+--dark-black-1: #1d2025;
+--dark-black-2: #252931;
+--dark-black-3: #282c34;
+--dark-white: #abb2bf;
+--dark-red-2: #e06c75;
+--dark-red: #be5046;
+--dark-green: #98c379;
+--dark-yellow: #e5c07b;
+--dark-orange: #d19a66;
+--dark-blue: #61afef;
+--dark-purple: #c678dd;
+--dark-cyan: #56b6c2;
+--dark-gutter-grey: #4b5263;
+--dark-comment-grey: #5c6370;
+
+--light-black: #383a42;
+--light-white-1: #fafafa;
+--light-white-2: #cfd0d1;
+--light-white-3: #a1a1a1;
+--light-light-red: #e45649;
+--light-dark-red: #ca1243;
+--light-green: #50a14f;
+--light-light-yellow: #c18401;
+--light-dark-yellow: #986801;
+--light-blue: #526eff;
+--light-magenta: #a626a4;
+--light-cyan: #0184bc;
+}
+
+
+#contact{
+--dark-black-1: #221f22;
+--dark-black-2: #2d2a2e;
+--dark-white: #fcfcfa;
+--dark-red: #ff6188;
+--dark-orange: #fc9867;
+--dark-yellow: #ffd866;
+--dark-green: #a9dc76;
+--dark-blue: #78dce8;
+--dark-purple: #ab9df2;
+
+
+--light-white-1: #fefaf9;
+--light-white-2: #faf4f2;
+--light-black: #29242a;
+--light-red: #e14775;
+--light-orange: #e16032;
+--light-yellow: #cc7a0a;
+--light-green: #269d69;
+--light-blue: #1c8ca8;
+--light-purple: #7058be;
+}
+
+#footer{
+  --dark-black-1: #221f22;
+  --dark-black-2: #2d2a2e;
+  --dark-white: #fcfcfa;
+  --dark-red: #ff6188;
+  --dark-orange: #fc9867;
+  --dark-yellow: #ffd866;
+  --dark-green: #a9dc76;
+  --dark-blue: #78dce8;
+  --dark-purple: #ab9df2;
+  
+  
+  --light-white-1: #fefaf9;
+  --light-white-2: #faf4f2;
+  --light-black: #29242a;
+  --light-red: #e14775;
+  --light-orange: #e16032;
+  --light-yellow: #cc7a0a;
+  --light-green: #269d69;
+  --light-blue: #1c8ca8;
+  --light-purple: #7058be;
+  }
+  
+.global-title {
+  color: var(--color-yellow);
+  font-size: 38px;
+  font-weight: bold;
+}
+.global-title-2 {
+  color: var(--color-blue);
+  font-size: larger;
+  font-weight: bold;
+}
+.global-text {
+  color: var(--color-white);
+}
+.global-hyperlink {
+  color: var(--color-blue);
+  font-weight: bold;
+}
+.global-button {
+  color: var(--color-green);
+  font-weight: bold;
+}
+
+.bar-background {
+  background-color: var(--color-bg-1);
+  height: 7vh;
+}
+
+.bar-font {
+  color: var(--color-white);
+}
+
+.hero-background {
+  background-color: var(--color-bg-2);
+  height: 100vh;
+}
+
+.about-background {
+  background-color: var(--color-bg-2);
+  height: 100vh;
+}
+.personal-background {
+  background-color: var(--color-bg-2);
+  height: 100vh;
+}
+.skills-background {
+  background-color: var(--color-bg-2);
+  height: 100vh;
+}
+.career-background {
+  background-color: var(--color-bg-2);
+  height: 100vh;
+}
+.contact-background {
+  background-color: var(--color-bg-2);
+  height: 100vh;
+}

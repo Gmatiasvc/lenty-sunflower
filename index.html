@@ -3,19 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index_styles.css"/>
-    <link rel="stylesheet" href="./css/tailwind.css"/>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/tailwind.css" />
     <title>lenty-sunflower</title>
-
-
   </head>
 
   <body>
-    <nav class="p-4 fixed w-full flex items-center navbar-background navbar-font">
+    <script src="./js/style_observer.js"></script>
+    <nav
+      class="p-4 fixed w-full flex items-center bar-background bar-font">
       <div class="mr-auto">
         <h1 class="text-2xl font-bold">Gerardo Venegas</h1>
       </div>
-
 
       <div class="hidden space-x-6 md:flex">
         <div><a href="#hero">Home</a></div>
@@ -26,7 +25,7 @@
         <div><a href="#contact">Contact</a></div>
         <div><a href="#">Curriculum</a></div>
       </div>
-      
+
       <div class="flex space-x-6 md:hidden">
         <div><a href="#hero">MENU</a></div>
       </div>
@@ -36,7 +35,7 @@
       class="antialiased h-screen snap-y snap-mandatory overflow-y-scroll scroll-auto"
     >
       <section id="hero" class="snap-center">
-        <div class= "p-5 items-center grid md:grid-cols-2 hero-background">
+        <div class="p-5 items-center grid md:grid-cols-2 hero-background">
           <div class="m-6">
             <div class="m-2 global-title">GERARDO</div>
             <div class="m-2 global-title-2">DEVELOPER IN TRAINING</div>
@@ -44,21 +43,25 @@
               LEEER: Actualmente solo encontrará el layout que seguirá la
               pagina. Estilos y contenidos no estan listos. Puede encontrar el
               código en el repositorio:
-              <a href="https://github.com/Gmatiasvc/lenty-sunflower" class="global-hyperlink"
+              <a
+                href="https://github.com/Gmatiasvc/lenty-sunflower"
+                class="global-hyperlink"
                 >https://github.com/Gmatiasvc/lenty-sunflower</a
               >
               y la pagina web está en vivo en
-              <a href="https://gmatiasvc.github.io/lenty-sunflower" class="global-hyperlink"
+              <a
+                href="https://gmatiasvc.github.io/lenty-sunflower"
+                class="global-hyperlink"
                 >https://gmatiasvc.github.io/lenty-sunflower</a
               >
               mediante el uso de github pages.
             </div>
-            <div class= "flex m-4">
+            <div class="flex m-4">
               <div class="p-2 global-button">CONTACT</div>
               <div class="p-2 global-button">ABOUT</div>
             </div>
           </div>
-          <div class="m-3  justify-center hidden md:flex">
+          <div class="m-3 justify-center hidden md:flex">
             <img
               src="https://placehold.co/600x400?text=Placeholder\nImage"
               alt="Un placeholder"
@@ -68,9 +71,7 @@
       </section>
 
       <section id="about" class="snap-center">
-        <div
-          class="p-5 items-center grid md:grid-cols-2 about-background"
-        >
+        <div class="p-5 items-center grid md:grid-cols-2 about-background">
           <div class="bg-blue-500 m-3 p-2">
             <div class="bg-blue-600 m-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
@@ -94,7 +95,9 @@
       <section id="personal" class="snap-center">
         <div class="p-0 h-screen flex personal-background">
           <div class="bg-rose-500 w-36 hidden md:flex">deco</div>
-          <div class="bg-rose-500 m-4 ml-9mt-12 p-2 w-72 hidden xl:flex">fam img</div>
+          <div class="bg-rose-500 m-4 ml-9mt-12 p-2 w-72 hidden xl:flex">
+            fam img
+          </div>
 
           <div class="bg-rose-500 m-4 mt-12 p-2 flex-1">
             FAMILIA Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -103,15 +106,15 @@
             culpa illo ullam. Nulla.
           </div>
 
-          <div class="bg-rose-500 m-4 mr-9 mt-12 p-2 w-72 hidden xl:flex">social</div>
+          <div class="bg-rose-500 m-4 mr-9 mt-12 p-2 w-72 hidden xl:flex">
+            social
+          </div>
           <div class="bg-rose-500 w-36 hidden md:flex">deco</div>
         </div>
       </section>
 
       <section id="skills" class="snap-center">
-        <div
-          class="p-5 items-center grid md:grid-cols-2 skills-background"
-        >
+        <div class="p-5 items-center grid md:grid-cols-2 skills-background">
           <div class="bg-green-500 m-3 p-2">
             <div class="bg-green-600 m-2">skills</div>
             <div class="bg-green-600 m-2">
@@ -149,9 +152,15 @@
             <div class="bg-amber-600 flex m-4">
               <div class="bg-amber-700 m-2 p-2 flex-2">GITHUB REPO</div>
               <div class="bg-amber-700 m-2 p-2 flex-2">GITHUB REPO</div>
-              <div class="bg-amber-700 m-2 p-2 flex-2 hidden md:flex">GITHUB REPO</div>
-              <div class="bg-amber-700 m-2 p-2 flex-2 hidden md:flex">GITHUB REPO</div>
-              <div class="bg-amber-700 m-2 p-2 flex-2 hidden lg:flex">GITHUB REPO</div>
+              <div class="bg-amber-700 m-2 p-2 flex-2 hidden md:flex">
+                GITHUB REPO
+              </div>
+              <div class="bg-amber-700 m-2 p-2 flex-2 hidden md:flex">
+                GITHUB REPO
+              </div>
+              <div class="bg-amber-700 m-2 p-2 flex-2 hidden lg:flex">
+                GITHUB REPO
+              </div>
             </div>
           </div>
         </div>
@@ -168,9 +177,7 @@
       </section>
 			-->
       <section id="contact" class="snap-start">
-        <div
-          class="p-5 items-center grid md:grid-cols-2 contact-background"
-        >
+        <div class="p-5 items-center grid md:grid-cols-2 contact-background">
           <div class="bg-violet-500 m-3 p-2">
             <div class="bg-violet-600 m-2">Contact</div>
             <div class="bg-violet-600 m-2">Inquiries?</div>
@@ -194,7 +201,7 @@
       </section>
 
       <section id="footer" class="snap-center">
-        <div class="bg-gray-800 text-white p-5 flex">
+        <div class="bg-gray-600 text-white p-5 flex">
           <div class="w-16 bg-gray-700 m-2">Gerardo V</div>
           <div class="flex-1 bg-gray-700 m-2">
             <div>SOCIAL</div>
