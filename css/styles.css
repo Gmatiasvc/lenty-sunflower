@@ -18,24 +18,41 @@ main::-webkit-scrollbar {
 div {
   transition: background-color 1.0s ease-in-out, color 1.0s ease-in-out;
 }
-
 nav {
+  transition: background-color 1.0s ease-in-out, color 1.0s ease-in-out;
+}
+a {
   transition: background-color 1.0s ease-in-out, color 1.0s ease-in-out;
 }
 
 :root {
   --color-bg-1: #1c1d21;
-  --color-bg-2: #2f3137;
-  --color-white: #fffcff;
-  --color-red: #a30b37;
-  --color-orange: #d46921;
-  --color-yellow: #e3b505;
-  --color-green: #4ab553;
-  --color-blue: #5aa9e6;
-  --color-purple: #766ea5;
+  --color-bg-2: #1c1d21;
+  --color-white: #1c1d21;
+  --color-text-1: #1c1d21;
+  --color-text-2: #1c1d21;
+  --color-text-3: #1c1d21;
+  --color-text-4: #1c1d21;
+  --color-text-5: #1c1d21;
+  --color-text-6: #1c1d21;
+  
+  --color-hyperlink: #1c1d21;
 }
 
 #hero{
+  
+  --dark-bg-1: #1a1b26;
+  --dark-bg-2: #24283b;
+  --dark-white: #cfc9c2;
+  --dark-text-1: #e0af68;
+  --dark-text-2: #9ece6a;
+  --dark-text-3: #f7768e;
+  --dark-text-4: #f7768e;
+  --dark-text-5: #9aa5ce;
+  --dark-text-6: #5aa9e6;
+  
+  --dark-hyperlink: #7dcfff;
+
   --dark-white: #cfc9c2;
   --dark-white-2: #c0caf5;
   --dark-white-3: #a9b1d6;
@@ -45,7 +62,7 @@ nav {
   --dark-black-2: #24283b;
   --dark-black-1: #1a1b26;
   --dark-red: #f7768e;
-  --dark-orange: #ff9e64;
+  --dark-orange: #e09062;
   --dark-yellow: #e0af68;
   --dark-green: #9ece6a;
   --dark-teal: #73daca;
@@ -53,7 +70,7 @@ nav {
   --dark-cyan: #2ac3de;
   --dark-light-blue: #7dcfff;
   --dark-blue: #7aa2f7;
-  --dark-purple: #bb9af7;
+  --dark-purple: #766ea5;
 
 
   --light-white: #e6e7ed;
@@ -211,12 +228,12 @@ nav {
   }
   
 .global-title {
-  color: var(--color-yellow);
+  color: var(--color-text-1);
   font-size: 38px;
   font-weight: bold;
 }
 .global-title-2 {
-  color: var(--color-blue);
+  color: var(--color-text-2);
   font-size: larger;
   font-weight: bold;
 }
@@ -224,11 +241,11 @@ nav {
   color: var(--color-white);
 }
 .global-hyperlink {
-  color: var(--color-blue);
+  color: var(--color-hyperlink);
   font-weight: bold;
 }
 .global-button {
-  color: var(--color-green);
+  color: var(--color-text-6);
   font-weight: bold;
 }
 
