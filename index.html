@@ -27,7 +27,7 @@
       </div>
 
       <div class="flex space-x-6 md:hidden">
-        <div><a href="#hero">MENU</a></div>
+        <div><a>MENU</a></div>
       </div>
     </nav>
 
@@ -70,10 +70,19 @@
         </div>
       </section>
 
-      <section id="about" class="snap-center">
+      <section id="about" class="snap-center scroll-p">
         <div class="p-5 items-center grid md:grid-cols-2 about-background">
-          <div class="bg-blue-500 m-3 p-2">
-            <div class="bg-blue-600 m-2">
+          <div class="m-3 p-2 hidden md:grid md:grid-rows-3 ">
+            <div class="global-title">ABOUT ME</div>
+            <div class="global-text m-2">small intro</div>
+            <div class="global-title-2 flex m-4">I use debian btw</div>
+          </div>
+          <div class="m-3 p-2">
+            <div class="p-2 flex md:hidden">
+              <div class="global-title m-2 2a">ABOUT ME</div>
+              <div class="global-title-2 flex m-4">I use debian btw</div>
+            </div>
+            <div class="global-text m-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
               laudantium sequi dolores fuga consectetur doloribus, voluptas,
               pariatur rem earum reprehenderit atque ex possimus magnam
@@ -84,11 +93,7 @@
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             </div>
           </div>
-          <div class="bg-blue-500 m-3 p-2">
-            <div class="bg-blue-600 m-2">ABOUT ME</div>
-            <div class="bg-blue-600 m-2">small intro</div>
-            <div class="bg-blue-600 flex m-4">I use debian btw</div>
-          </div>
+
         </div>
       </section>
 
@@ -115,17 +120,17 @@
 
       <section id="skills" class="snap-center">
         <div class="p-5 items-center grid md:grid-cols-2 skills-background">
-          <div class="bg-green-500 m-3 p-2">
-            <div class="bg-green-600 m-2">skills</div>
-            <div class="bg-green-600 m-2">
+          <div class="m-3 p-2">
+            <div class="global-title m-2">skills</div>
+            <div class="global-text m-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
               laudantium sequi dolores fuga consectetur doloribus, voluptas,
               pariatur rem earum reprehenderit atque ex possimus magnam
               assumenda veniam. Commodi expedita voluptas hic.
             </div>
           </div>
-          <div class="bg-green-300 m-3 flex justify-center">
-            <div class="bg-green-200 m-2">
+          <div class=" m-3 flex justify-center">
+            <div class="global-title-3 m-2">
               <ul>
                 <li>Some Language i'm proficient at, like python</li>
                 <li>Some Language i'm proficient at, like c++</li>
@@ -139,26 +144,26 @@
       </section>
 
       <section id="career" class="snap-center">
-        <div class="p-5 items-center grid md:grid-cols-2 career-background">
-          <div class="bg-amber-500 m-3 p-2">
-            <div class="bg-amber-600 m-2 p-2">CAREER</div>
-            <div class="bg-amber-600 m-2 p-2">
+        <div class="p-5 items-center grid md:flex career-background">
+          <div class="m-3 p-2">
+            <div class="global-title m-2 p-2">CAREER</div>
+            <div class="global-text m-2 p-2">
               Lorem ipsum dolor sit, amet consecte tur adipisicing elit. Optio,
               officiis velit necessitatibus blanditiis fuga exercitationem
               voluptatibus a tenetur iusto sed, unde voluptate? Cum dignissimos
               pariatur, ipsa similique temporibus fugit quaerat?
             </div>
-            <div class="bg-amber-600 m-2 p-2">TIMELINE</div>
-            <div class="bg-amber-600 flex m-4">
-              <div class="bg-amber-700 m-2 p-2 flex-2">GITHUB REPO</div>
-              <div class="bg-amber-700 m-2 p-2 flex-2">GITHUB REPO</div>
-              <div class="bg-amber-700 m-2 p-2 flex-2 hidden md:flex">
+            <div class="global-title-2 m-2 p-2">TIMELINE</div>
+            <div class=" flex m-4">
+              <div class="global-title-3 m-2 p-2 flex-2">GITHUB REPO</div>
+              <div class="global-title-3 m-2 p-2 flex-2">GITHUB REPO</div>
+              <div class="global-title-3 m-2 p-2 flex-2 hidden md:flex">
                 GITHUB REPO
               </div>
-              <div class="bg-amber-700 m-2 p-2 flex-2 hidden md:flex">
+              <div class="global-title-3 m-2 p-2 flex-2 hidden md:flex">
                 GITHUB REPO
               </div>
-              <div class="bg-amber-700 m-2 p-2 flex-2 hidden lg:flex">
+              <div class="global-title-3 m-2 p-2 flex-2 hidden lg:flex">
                 GITHUB REPO
               </div>
             </div>
@@ -178,17 +183,17 @@
 			-->
       <section id="contact" class="snap-start">
         <div class="p-5 items-center grid md:grid-cols-2 contact-background">
-          <div class="bg-violet-500 m-3 p-2">
-            <div class="bg-violet-600 m-2">Contact</div>
-            <div class="bg-violet-600 m-2">Inquiries?</div>
-            <div class="bg-violet-600 m-2">
+          <div class="m-3 p-2">
+            <div class="global-title m-2">Contact</div>
+            <div class="global-title-2 m-2">Inquiries?</div>
+            <div class="global-text m-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
               laudantium sequi dolores fuga consectetur doloribus.
             </div>
-            <div class="bg-violet-600 flex m-4">
-              <div class="bg-violet-700 m-2">GITHUB</div>
-              <div class="bg-violet-700 m-2">INSTAGRAM</div>
-              <div class="bg-violet-700 m-2">EMAIL</div>
+            <div class="flex m-4">
+              <div class="global-title-3 m-2">GITHUB</div>
+              <div class="global-title-3 m-2">INSTAGRAM</div>
+              <div class="global-title-3 m-2">EMAIL</div>
             </div>
           </div>
           <div class="bg-violet-300 m-3 flex justify-center">

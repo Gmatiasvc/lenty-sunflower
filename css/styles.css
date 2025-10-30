@@ -92,6 +92,19 @@ a {
 
 
 #about{
+  
+  --dark-bg-1: #0c0c0c;
+  --dark-bg-2: #0c0c0c;
+  --dark-white: #cccccc;
+  --dark-text-1: #16c60c;
+  --dark-text-2: #e74856;
+  --dark-text-3: #3b78ff;
+  --dark-text-4: #f9f1a5;
+  --dark-text-5: #61d6d6;
+  --dark-text-6: #767676;
+  
+  --dark-hyperlink: #61d6d6;
+
 --dark-black-1: #0c0c0c;
 --dark-black-2: #0c0c0c;
 --dark-blue: #0037da;
@@ -113,6 +126,19 @@ a {
 }
 
 #skills{
+  
+  --dark-bg-1: #1a1b26;
+  --dark-bg-2: #24283b;
+  --dark-white: #cfc9c2;
+  --dark-text-1: #e0af68;
+  --dark-text-2: #e0af68;
+  --dark-text-3: #9ece6a;
+  --dark-text-4: #bb9af7;
+  --dark-text-5: #f7768e;
+  --dark-text-6: #ff9e64;
+  
+  --dark-hyperlink: #7dcfff;
+
   --dark-white: #cfc9c2;
   --dark-white-2: #c0caf5;
   --dark-white-3: #a9b1d6;
@@ -138,7 +164,7 @@ a {
   --light-black-2: #40434f;
   --light-black-3: #6c6e75;
   --light-red: #8c4351;
-  --light-orange: #body965027;
+  --light-orange: #965027;
   --light-yellow: #8f5e15;
   --light-brown: #634f30;
   --light-green: #385f0d;
@@ -151,6 +177,19 @@ a {
 
 
 #career{
+  
+  --dark-bg-1: #1d2025;
+  --dark-bg-2: #252931;
+  --dark-white: #abb2bf;
+  --dark-text-1: #d19a66;
+  --dark-text-2: #e06c75;
+  --dark-text-3: #98c379;
+  --dark-text-4: #e5c07b;
+  --dark-text-5: #c678dd;
+  --dark-text-6: #61afef;
+  
+  --dark-hyperlink: #56b6c2;
+
 --dark-black-1: #1d2025;
 --dark-black-2: #252931;
 --dark-black-3: #282c34;
@@ -182,6 +221,19 @@ a {
 
 
 #contact{
+  
+  --dark-bg-1: #221f22;
+  --dark-bg-2: #2d2a2e;
+  --dark-white: #fcfcfa;
+  --dark-text-1: #ffd866;
+  --dark-text-2: #a9dc76;
+  --dark-text-3: #ff6188;
+  --dark-text-4: #fc9867;
+  --dark-text-5: #78dce8;
+  --dark-text-6: #ab9df2;
+  
+  --dark-hyperlink: #78dce8;
+
 --dark-black-1: #221f22;
 --dark-black-2: #2d2a2e;
 --dark-white: #fcfcfa;
@@ -205,6 +257,19 @@ a {
 }
 
 #footer{
+  
+  --dark-bg-1: #221f22;
+  --dark-bg-2: #2d2a2e;
+  --dark-white: #fcfcfa;
+  --dark-text-1: #ffd866;
+  --dark-text-2: #a9dc76;
+  --dark-text-3: #ff6188;
+  --dark-text-4: #fc9867;
+  --dark-text-5: #78dce8;
+  --dark-text-6: #ab9df2;
+  
+  --dark-hyperlink: #78dce8;
+
   --dark-black-1: #221f22;
   --dark-black-2: #2d2a2e;
   --dark-white: #fcfcfa;
@@ -235,6 +300,11 @@ a {
 .global-title-2 {
   color: var(--color-text-2);
   font-size: larger;
+  font-weight: bold;
+}
+.global-title-3 {
+  color: var(--color-text-3);
+  font-size: large;
   font-weight: bold;
 }
 .global-text {
