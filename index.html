@@ -10,8 +10,7 @@
 
   <body>
     <script src="./js/style_observer.js"></script>
-    <nav
-      class="p-4 fixed w-full flex items-center bar-background bar-font">
+    <nav class="p-4 fixed w-full flex items-center bar-background bar-font">
       <div class="mr-auto">
         <h1 class="text-2xl font-bold">Gerardo Venegas</h1>
       </div>
@@ -38,11 +37,14 @@
         <div class="p-5 items-center grid md:grid-cols-2 hero-background">
           <div class="m-6">
             <div class="m-2 global-title">GERARDO</div>
-            <div class="m-2 global-title-2">DEVELOPER IN TRAINING</div>
+            <div class="m-2 global-title-2">Bug maker</div>
             <div class="m-2 global-text">
-              LEEER: Actualmente solo encontrará el layout que seguirá la
-              pagina. Estilos y contenidos no estan listos. Puede encontrar el
-              código en el repositorio:
+              <a>
+                Programador motivado por su pasion de aprender cosas nuevas.
+                Experto en identificar problemas y preguntarle a chatsito como
+                resolverlos.
+              </a>
+              <a> Puede encontrar el código en el repositorio:</a>
               <a
                 href="https://github.com/Gmatiasvc/lenty-sunflower"
                 class="global-hyperlink"
@@ -72,31 +74,31 @@
 
       <section id="about" class="snap-center scroll-p">
         <div class="p-5 items-center grid md:grid-cols-2 about-background">
-          <div class="m-3 p-2 hidden md:grid md:grid-rows-3 ">
+          <div class="m-3 p-2 hidden md:grid md:grid-rows-3">
             <div class="global-title">ABOUT ME</div>
-            <div class="global-text m-2">small intro</div>
-            <div class="global-title-2 flex m-4">I use debian btw</div>
+            <div class="global-title-2 flex m-4"><p>I use debian btw</p></div>
           </div>
           <div class="m-3 p-2">
-            <div class="p-2 flex md:hidden">
-              <div class="global-title m-2 2a">ABOUT ME</div>
-              <div class="global-title-2 flex m-4">I use debian btw</div>
+            <div class="p-2 grid md:hidden">
+              <div class="global-title">ABOUT ME</div>
+              <div class="global-title-2 bottom"><p>I use debian btw</p></div>
             </div>
             <div class="global-text m-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              laudantium sequi dolores fuga consectetur doloribus, voluptas,
-              pariatur rem earum reprehenderit atque ex possimus magnam
-              assumenda veniam. Commodi expedita voluptas hic. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Error obcaecati dolorem
-              reprehenderit dolore ad, fugiat, sunt explicabo mollitia alias cum
-              sit cumque eveniet, aliquam soluta est! Iure sit officia fuga.
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Empece a programar desde temprana edad durante la pandemia de
+              2020, donde empecé a desarrollar scripts y tuis en python en mi
+              tiempo libre. Durante el mismo tiempo cambié de windows a
+              distribuciones de linux basadas en debian, empezando en elementary
+              OS, pase a Ubuntu y llegué a debian (donde ahora uso Hyprland como
+              WM). Empecé a estudiar en la Universidad Nacional de Trujillo a
+              los 16 años y durante mi educacion universitaria he desarrollado
+              una replica de tetris en c++, una base de datos no SQL en java y
+              conexiones cliente/servidor en mis primeros 3 semestres
+              respetivamente.
             </div>
           </div>
-
         </div>
       </section>
-
+      <!-- WIP
       <section id="personal" class="snap-center">
         <div class="p-0 h-screen flex personal-background">
           <div class="bg-rose-500 w-36 hidden md:flex">deco</div>
@@ -117,26 +119,36 @@
           <div class="bg-rose-500 w-36 hidden md:flex">deco</div>
         </div>
       </section>
-
+-->
       <section id="skills" class="snap-center">
         <div class="p-5 items-center grid md:grid-cols-2 skills-background">
           <div class="m-3 p-2">
-            <div class="global-title m-2">skills</div>
+            <div class="global-title m-2">Skills</div>
             <div class="global-text m-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              laudantium sequi dolores fuga consectetur doloribus, voluptas,
-              pariatur rem earum reprehenderit atque ex possimus magnam
-              assumenda veniam. Commodi expedita voluptas hic.
+              Tengo experiencia en distintos lenguajes de programacion y
+              distintas tecnologias. Ademas tengo la capacidad de aprender
+              nuevas habilidades facil y rápidamente.
+            </div>
+            <div class="m-3 flex md:hidden justify-center">
+              <div class="global-title-3 m-2">
+                <ul>
+                  <li>Python</li>
+                  <li>c++</li>
+                  <li>Java</li>
+                  <li>Tailwind</li>
+                  <li>MySQL</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class=" m-3 flex justify-center">
+          <div class="m-3 hidden md:flex justify-center">
             <div class="global-title-3 m-2">
               <ul>
-                <li>Some Language i'm proficient at, like python</li>
-                <li>Some Language i'm proficient at, like c++</li>
-                <li>Some Language i'm proficient at, like googling</li>
-                <li>Some Language i'm proficient at, like java</li>
-                <li>Some Language i'm proficient at, like html/css</li>
+                <li>Python</li>
+                <li>c++</li>
+                <li>Java</li>
+                <li>Tailwind</li>
+                <li>MySQL</li>
               </ul>
             </div>
           </div>
@@ -146,15 +158,15 @@
       <section id="career" class="snap-center">
         <div class="p-5 items-center grid md:flex career-background">
           <div class="m-3 p-2">
-            <div class="global-title m-2 p-2">CAREER</div>
+            <div class="global-title m-2 p-2">Career</div>
             <div class="global-text m-2 p-2">
               Lorem ipsum dolor sit, amet consecte tur adipisicing elit. Optio,
               officiis velit necessitatibus blanditiis fuga exercitationem
               voluptatibus a tenetur iusto sed, unde voluptate? Cum dignissimos
               pariatur, ipsa similique temporibus fugit quaerat?
             </div>
-            <div class="global-title-2 m-2 p-2">TIMELINE</div>
-            <div class=" flex m-4">
+            <div class="global-title-2 m-2 p-2">Proyextos publicos</div>
+            <div class="flex m-4">
               <div class="global-title-3 m-2 p-2 flex-2">GITHUB REPO</div>
               <div class="global-title-3 m-2 p-2 flex-2">GITHUB REPO</div>
               <div class="global-title-3 m-2 p-2 flex-2 hidden md:flex">
@@ -195,8 +207,14 @@
               <div class="global-title-3 m-2">INSTAGRAM</div>
               <div class="global-title-3 m-2">EMAIL</div>
             </div>
+            <div class="bg-violet-300 m-3 md:hidden flex justify-center">
+              <img
+                src="https://placehold.co/600x400?text=Form"
+                alt="Un placeholder"
+              />
+            </div>
           </div>
-          <div class="bg-violet-300 m-3 flex justify-center">
+          <div class="bg-violet-300 m-3 hidden md:flex justify-center">
             <img
               src="https://placehold.co/600x400?text=Form"
               alt="Un placeholder"
