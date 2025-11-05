@@ -339,3 +339,36 @@ a {
   background-color: var(--color-bg-2);
   height: 100vh;
 }
+
+.form-label{
+  color: var(--color-text-5);
+  font-weight: 600;
+  font-size: larger;
+  justify-self: center;
+}
+
+.form-box{
+  color: var(--color-text-6);
+  font-weight: 600;
+  font-size:medium;
+  border-width: 1px;
+  border-radius: 7px;
+  border-color: var(--color-text-6);
+}
+
+.form-opt{
+  background-color: var(--color-bg-1);
+  color: var(--color-text-6);
+  font-weight: 400;
+  font-size:medium;
+}
+
+.form-button{
+  color: var(--color-text-4);
+  font-weight: 600;
+  font-size:medium;
+  border-width: 1px;
+  border-radius: 7px;
+  border-color: var(--color-text-4);
+  background-color: var(--color-bg-1);
+}

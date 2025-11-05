@@ -33,6 +33,7 @@
     <main
       class="antialiased h-screen snap-y snap-mandatory overflow-y-scroll scroll-auto"
     >
+
       <section id="hero" class="snap-center">
         <div class="p-5 items-center grid md:grid-cols-2 hero-background">
           <div class="m-6">
@@ -196,29 +197,155 @@
       <section id="contact" class="snap-start">
         <div class="p-5 items-center grid md:grid-cols-2 contact-background">
           <div class="m-3 p-2">
-            <div class="global-title m-2">Contact</div>
-            <div class="global-title-2 m-2">Inquiries?</div>
+            <div class="global-title m-2">Contactame</div>
+            <div class="global-title-2 m-2">Alguna duda?</div>
             <div class="global-text m-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              laudantium sequi dolores fuga consectetur doloribus.
+              Puedes enviarme un mensaje con el formulario de abajo o mediante
+              alguna de mis redes sociales.
             </div>
             <div class="flex m-4">
               <div class="global-title-3 m-2">GITHUB</div>
               <div class="global-title-3 m-2">INSTAGRAM</div>
               <div class="global-title-3 m-2">EMAIL</div>
             </div>
-            <div class="bg-violet-300 m-3 md:hidden flex justify-center">
-              <img
-                src="https://placehold.co/600x400?text=Form"
-                alt="Un placeholder"
-              />
+
+            <div class="flex md:hidden justify-center">
+              <form action="">
+                <div class="grid">
+                  <label for="email" class="form-label pb-2"
+                    >Correo electronico</label
+                  >
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    class="form-box pl-3 p-2"
+                    placeholder="example@mail.com"
+                    required=""
+                  />
+                </div>
+                <div class="grid sm:grid-cols-2">
+                  <div class="grid pr-0 sm:pr-2 pt-2 sm:pt-5">
+                    <label for="subject" class="form-label pb-2">Asunto</label>
+                    <select id="subject" class="form-box pl-3 p-2">
+                      <option selected="" class="form-opt">
+                        Selecciona un asunto
+                      </option>
+                      <option value="CM" class="form-opt">Comision</option>
+                      <option value="LG" class="form-opt">Legal</option>
+                      <option value="WK" class="form-opt">Laboral</option>
+                      <option value="OT" class="form-opt">Otro</option>
+                    </select>
+                  </div>
+
+                  <div class="grid pr-0 sm:pl-2 pt-2 sm:pt-5">
+                    <label for="loc" class="form-label pb-2">Ubicacion</label>
+                    <select id="loc" class="form-box pl-3 p-2">
+                      <option selected="" class="form-opt">
+                        Selecciona una region
+                      </option>
+                      <option value="PRU" class="form-opt">Perú</option>
+                      <option value="LAT" class="form-opt">
+                        Lationamerica
+                      </option>
+                      <option value="AME" class="form-opt">America</option>
+                      <option value="WST" class="form-opt">
+                        Europa/Africa
+                      </option>
+                      <option value="EST" class="form-opt">Asia/Oceania</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="grid pr-0 sm:pr-2 pt-2 sm:pt-5">
+                  <label for="msg" class="form-label pb-2">Mensaje</label>
+                  <textarea
+                    id="msg"
+                    rows="4"
+                    class="form-box pl-3 p-2"
+                    placeholder="Escribe tu mensaje"
+                  ></textarea>
+                </div>
+                <div class="grid sm:grid-cols-2">
+                  <div class="grid pr-8 pl-8 pt-8 sm:pt-5">
+                    <button type="submit" class="form-button p-1">
+                      Enviar
+                    </button>
+                  </div>
+
+                  <div class="grid pr-8 pl-8 pt-3 sm:pt-5">
+                    <button type="reset" class="form-button p-1">
+                      Reiniciar
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
-          <div class="bg-violet-300 m-3 hidden md:flex justify-center">
-            <img
-              src="https://placehold.co/600x400?text=Form"
-              alt="Un placeholder"
-            />
+
+          <div class="hidden md:flex justify-center m-5">
+            <form action="">
+              <div class="grid">
+                <label for="email" class="form-label pb-2"
+                  >Correo electronico</label
+                >
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  class="form-box pl-3 p-2"
+                  placeholder="example@mail.com"
+                  required=""
+                />
+              </div>
+              <div class="grid sm:grid-cols-2">
+                <div class="grid pr-0 sm:pr-2 pt-2 sm:pt-5">
+                  <label for="subject" class="form-label pb-2">Asunto</label>
+                  <select id="subject" class="form-box pl-3 p-2">
+                    <option selected="" class="form-opt">
+                      Selecciona un asunto
+                    </option>
+                    <option value="CM" class="form-opt">Comision</option>
+                    <option value="LG" class="form-opt">Legal</option>
+                    <option value="WK" class="form-opt">Laboral</option>
+                    <option value="OT" class="form-opt">Otro</option>
+                  </select>
+                </div>
+
+                <div class="grid pr-0 sm:pl-2 pt-2 sm:pt-5">
+                  <label for="loc" class="form-label pb-2">Ubicacion</label>
+                  <select id="loc" class="form-box pl-3 p-2">
+                    <option selected="" class="form-opt">
+                      Selecciona una region
+                    </option>
+                    <option value="PRU" class="form-opt">Perú</option>
+                    <option value="LAT" class="form-opt">Lationamerica</option>
+                    <option value="AME" class="form-opt">America</option>
+                    <option value="WST" class="form-opt">Europa/Africa</option>
+                    <option value="EST" class="form-opt">Asia/Oceania</option>
+                  </select>
+                </div>
+              </div>
+              <div class="grid pr-0 sm:pr-2 pt-2 sm:pt-5">
+                <label for="msg" class="form-label pb-2">Mensaje</label>
+                <textarea
+                  id="msg"
+                  rows="4"
+                  class="form-box pl-3 p-2"
+                  placeholder="Escribe tu mensaje"
+                ></textarea>
+              </div>
+              <div class="grid sm:grid-cols-2">
+                <div class="grid pr-8 pl-8 pt-8 sm:pt-5">
+                  <button type="submit" class="form-button p-1">Enviar</button>
+                </div>
+
+                <div class="grid pr-8 pl-8 pt-3 sm:pt-5">
+                  <button type="reset" class="form-button p-1">
+                    Reiniciar
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
