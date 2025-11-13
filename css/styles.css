@@ -310,6 +310,10 @@ a {
   height: 7vh;
 }
 
+.foot-background {
+  background-color: var(--color-bg-1);
+
+}
 .bar-font {
   color: var(--color-white);
 }

@@ -9,7 +9,8 @@
   </head>
 
   <body>
-    <script src="./js/style_observer.js"></script>
+    <script src="./js/style_observer.js" defer></script>
+    <script src="./js/menu.js" defer></script>
     <nav class="p-4 fixed w-full flex items-center bar-background bar-font">
       <div class="mr-auto">
         <h1 class="text-2xl font-bold">Gerardo Venegas</h1>
@@ -25,15 +26,36 @@
         <div><a href="#">Curriculum</a></div>
       </div>
 
-      <div class="flex space-x-6 md:hidden">
-        <div><a>MENU</a></div>
+      <div class="flex space-x-6 md:hidden relative" id="menu-wrapper">
+        <div>
+          <button type="button" 
+                  id="menu-button"
+                  class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Options
+            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      
+        <div id="menu-panel"
+             class="  hidden absolute right-0 mt-12 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" 
+             role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
+          
+          <div class="py-1" role="none">
+            <a href="#hero" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Home</a>
+            <a href="#about" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">About</a>
+            <a href="#skills" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Skills</a>
+            <a href="#career" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Career</a>
+            <a href="#contact" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Contact</a>
+            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Curriculum</a>
+          </div>
       </div>
     </nav>
 
     <main
       class="antialiased h-screen snap-y snap-mandatory overflow-y-scroll scroll-auto"
     >
-
       <section id="hero" class="snap-center">
         <div class="p-5 items-center grid md:grid-cols-2 hero-background">
           <div class="m-6">
@@ -161,12 +183,11 @@
           <div class="m-3 p-2">
             <div class="global-title m-2 p-2">Career</div>
             <div class="global-text m-2 p-2">
-              Lorem ipsum dolor sit, amet consecte tur adipisicing elit. Optio,
-              officiis velit necessitatibus blanditiis fuga exercitationem
-              voluptatibus a tenetur iusto sed, unde voluptate? Cum dignissimos
-              pariatur, ipsa similique temporibus fugit quaerat?
+              He desarrollado multiples sistemas durante los años, en mi pagina
+              de github podrás encontrar una selección curada de mis mejores
+              trabajos.
             </div>
-            <div class="global-title-2 m-2 p-2">Proyextos publicos</div>
+            <div class="global-title-2 m-2 p-2">Proyectos publicos</div>
             <div class="flex m-4">
               <div class="global-title-3 m-2 p-2 flex-2">GITHUB REPO</div>
               <div class="global-title-3 m-2 p-2 flex-2">GITHUB REPO</div>
@@ -203,10 +224,18 @@
               Puedes enviarme un mensaje con el formulario de abajo o mediante
               alguna de mis redes sociales.
             </div>
-            <div class="flex m-4">
-              <div class="global-title-3 m-2">GITHUB</div>
-              <div class="global-title-3 m-2">INSTAGRAM</div>
-              <div class="global-title-3 m-2">EMAIL</div>
+            <div class="flex m-2">
+              <div class="global-title-3 m-2">
+                <a href="https://www.github.com/gmatiasvc">GITHUB</a>
+              </div>
+              <div class="global-title-3 m-2">
+                <a href="https://www.instagram.com/gerarditochiquitito"
+                  >INSTAGRAM</a
+                >
+              </div>
+              <div class="global-title-3 m-2">
+                <a href="mailto:gmatiasvc@hotmail.com">EMAIL</a>
+              </div>
             </div>
 
             <div class="flex md:hidden justify-center">
@@ -218,7 +247,7 @@
                   <input
                     type="text"
                     name="email"
-                    id="email"
+                    id="email-mobile"
                     class="form-box pl-3 p-2"
                     placeholder="example@mail.com"
                     required=""
@@ -226,8 +255,8 @@
                 </div>
                 <div class="grid sm:grid-cols-2">
                   <div class="grid pr-0 sm:pr-2 pt-2 sm:pt-5">
-                    <label for="subject" class="form-label pb-2">Asunto</label>
-                    <select id="subject" class="form-box pl-3 p-2">
+                    <label for="subject-mobile" class="form-label pb-2">Asunto</label>
+                    <select id="subject-mobile" class="form-box pl-3 p-2">
                       <option selected="" class="form-opt">
                         Selecciona un asunto
                       </option>
@@ -239,8 +268,8 @@
                   </div>
 
                   <div class="grid pr-0 sm:pl-2 pt-2 sm:pt-5">
-                    <label for="loc" class="form-label pb-2">Ubicacion</label>
-                    <select id="loc" class="form-box pl-3 p-2">
+                    <label for="loc-mobile" class="form-label pb-2">Ubicacion</label>
+                    <select id="loc-mobile" class="form-box pl-3 p-2">
                       <option selected="" class="form-opt">
                         Selecciona una region
                       </option>
@@ -257,9 +286,9 @@
                   </div>
                 </div>
                 <div class="grid pr-0 sm:pr-2 pt-2 sm:pt-5">
-                  <label for="msg" class="form-label pb-2">Mensaje</label>
+                  <label for="msg-mobile" class="form-label pb-2">Mensaje</label>
                   <textarea
-                    id="msg"
+                    id="msg-mobile"
                     rows="4"
                     class="form-box pl-3 p-2"
                     placeholder="Escribe tu mensaje"
@@ -351,15 +380,21 @@
       </section>
 
       <section id="footer" class="snap-center">
-        <div class="bg-gray-600 text-white p-5 flex">
-          <div class="w-16 bg-gray-700 m-2">Gerardo V</div>
-          <div class="flex-1 bg-gray-700 m-2">
-            <div>SOCIAL</div>
-            <div>&copy;</div>
+        <div class="foot-background bar-font p-5 flex">
+          <div class="m-2">
+            <p>Diseñado por:</p>
+            <p>Gerardo Venegas</p>
           </div>
-          <div class="bg-gray-700 m-2">
-            <div>gmatiavc@hotmail.com</div>
-            <div>Curriculum</div>
+          <div class="flex m-2">
+            <div>
+              <p>IG: @gerarditochiquitito</p>
+              <p>GITHUB: Gmatiasvc</p>
+            </div>
+            <div class="ml-2">
+              <p>EMAIL: gmatiasvc@hotmail.com</p>
+              <p>NUM: +51 938108431</p>
+              <p>Curriculum</p>
+            </div>
           </div>
         </div>
       </section>
