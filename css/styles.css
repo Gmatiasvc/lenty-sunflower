@@ -368,13 +368,19 @@ a {
 }
 
 .form-button{
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
   color: var(--color-text-4);
-  font-weight: 600;
+  font-weight: 500;
   font-size:medium;
   border-width: 1px;
   border-radius: 7px;
   border-color: var(--color-text-4);
   background-color: var(--color-bg-1);
+}
+
+.form-button:hover{
+  color: var(--color-text-3);
+  border-color: var(--color-text-3);
 }
 
 .menu-panel{
