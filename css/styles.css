@@ -16,13 +16,13 @@ main::-webkit-scrollbar {
 }
 
 div {
-  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out, border-color 1s ease-in-out;
 }
 nav {
   transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
 a {
-  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out, font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out;
 }
 
 :root {
@@ -375,4 +375,23 @@ a {
   border-radius: 7px;
   border-color: var(--color-text-4);
   background-color: var(--color-bg-1);
+}
+
+.menu-panel{
+  background-color: var(--color-bg-1);
+  border-width: 1px;
+  border-radius: 7px;
+  border-color: var(--color-text-4);
+}
+
+.menu-item{
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+  color: var(--color-white);
+  font-size: large;
+}
+.menu-item:hover{
+  background-color: var(--color-bg-2);
+  color: var(--color-text-4);
+  font-weight: bold;
+  font-size: larger;
 }
