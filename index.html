@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/tailwind.css" />
+
+    <!-- cdn funciona en su mayoria, pero el forulario se rompe, usar css compilado usando
+     tailwindcss cli.
+    <script src="https://cdn.tailwindcss.com"></script>-->
+
     <title>lenty-sunflower</title>
   </head>
 
@@ -53,40 +58,20 @@
           aria-labelledby="menu-button"
         >
           <div class="py-1" role="none">
-            <a
-              href="#hero"
-              class="menu-item flex p-1"
-              role="menuitem"
-              >Home</a
-            >
-            <a
-              href="#about"
-              class="menu-item flex p-1"
-              role="menuitem"
+            <a href="#hero" class="menu-item flex p-1" role="menuitem">Home</a>
+            <a href="#about" class="menu-item flex p-1" role="menuitem"
               >About</a
             >
-            <a
-              href="#skills"
-              class="menu-item flex p-1"
-              role="menuitem"
+            <a href="#skills" class="menu-item flex p-1" role="menuitem"
               >Skills</a
             >
-            <a
-              href="#career"
-              class="menu-item flex p-1"
-              role="menuitem"
+            <a href="#career" class="menu-item flex p-1" role="menuitem"
               >Career</a
             >
-            <a
-              href="#contact"
-              class="menu-item flex p-1"
-              role="menuitem"
+            <a href="#contact" class="menu-item flex p-1" role="menuitem"
               >Contact</a
             >
-            <a
-              href="#"
-              class="menu-item flex p-1"
-              role="menuitem"
+            <a href="#" class="menu-item flex p-1" role="menuitem"
               >Curriculum</a
             >
           </div>
@@ -450,5 +435,27 @@
         </div>
       </section>
     </main>
+    <button
+      id="theme-toggle"
+      class="fixed bottom-4 left-4 z-50 p-3 rounded-full bg-white text-black shadow-lg hover:scale-110 transition-transform duration-200 cursor-pointer"
+      aria-label="Toggle Theme"
+    >
+      <svg
+        id="theme-icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="5"></circle>
+        <path
+          d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+        ></path>
+      </svg>
+    </button>
   </body>
 </html>
