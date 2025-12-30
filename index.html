@@ -5,457 +5,672 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/tailwind.css" />
+    
+    <title>Gerardo Venegas | Portfolio</title>
+        
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- cdn funciona en su mayoria, pero el forulario se rompe, usar css compilado usando
-     tailwindcss cli.
-    <script src="https://cdn.tailwindcss.com"></script>-->
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    <title>lenty-sunflower</title>
-  </head>
-
-  <body>
-    <script src="./js/style_observer.js" defer></script>
-    <script src="./js/menu.js" defer></script>
-    <nav class="p-4 fixed w-full flex items-center bar-background bar-font">
-      <div class="mr-auto">
-        <h1 class="text-2xl font-bold">Gerardo Venegas</h1>
-      </div>
-
-      <div class="hidden space-x-6 md:flex">
-        <div><a href="#hero">Home</a></div>
-        <div><a href="#about">About</a></div>
-        <!--<div><a href="#personal">Personal</a></div> --->
-        <div><a href="#skills">Skills</a></div>
-        <div><a href="#career">Career</a></div>
-        <div><a href="#contact">Contact</a></div>
-        <div><a href="#">Curriculum</a></div>
-      </div>
-
-      <div class="flex space-x-6 md:hidden relative" id="menu-wrapper">
-        <div>
-          <button
-            type="button"
-            id="menu-button"
-            class="inline-flex justify-center w-full py-2"
-          >
-            <svg fill="#cfc9c2" width="4vh" viewBox="0 0 24.75 24.75">
-              <g>
-                <path
-                  d="M0,3.875c0-1.104,0.896-2,2-2h20.75c1.104,0,2,0.896,2,2s-0.896,2-2,2H2C0.896,5.875,0,4.979,0,3.875z M22.75,10.375H2
-                   c-1.104,0-2,0.896-2,2c0,1.104,0.896,2,2,2h20.75c1.104,0,2-0.896,2-2C24.75,11.271,23.855,10.375,22.75,10.375z M22.75,18.875H2
-                   c-1.104,0-2,0.896-2,2s0.896,2,2,2h20.75c1.104,0,2-0.896,2-2S23.855,18.875,22.75,18.875z"
-                />
-              </g>
-            </svg>
-          </button>
-        </div>
-
-        <div
-          id="menu-panel"
-          class="hidden absolute right-0 mt-14 w-32 origin-top-right menu-panel"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="menu-button"
-        >
-          <div class="py-1" role="none">
-            <a href="#hero" class="menu-item flex p-1" role="menuitem">Home</a>
-            <a href="#about" class="menu-item flex p-1" role="menuitem"
-              >About</a
+  <body
+    class="antialiased selection:bg-[var(--color-text-1)] selection:text-[var(--color-bg-1)]"
+  >
+  
+  <script src="./js/dynamic.js" defer></script>
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-[var(--color-bg-1)]/80 border-b border-[var(--color-text-6)]/20"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex-shrink-0">
+            <a
+              href="#hero"
+              class="text-2xl font-bold tracking-tighter theme-text-1 hover:opacity-80 transition-opacity"
             >
-            <a href="#skills" class="menu-item flex p-1" role="menuitem"
-              >Skills</a
-            >
-            <a href="#career" class="menu-item flex p-1" role="menuitem"
-              >Career</a
-            >
-            <a href="#contact" class="menu-item flex p-1" role="menuitem"
-              >Contact</a
-            >
-            <a href="#" class="menu-item flex p-1" role="menuitem"
-              >Curriculum</a
-            >
+              GV<span class="theme-text-2">.</span>
+            </a>
           </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#hero"
+                class="text-sm font-medium theme-text-main hover:theme-text-1 transition-colors"
+                >Home</a
+              >
+              <a
+                href="#about"
+                class="text-sm font-medium theme-text-main hover:theme-text-1 transition-colors"
+                >About</a
+              >
+              <a
+                href="#skills"
+                class="text-sm font-medium theme-text-main hover:theme-text-1 transition-colors"
+                >Skills</a
+              >
+              <a
+                href="#career"
+                class="text-sm font-medium theme-text-main hover:theme-text-1 transition-colors"
+                >Career</a
+              >
+              <a
+                href="#contact"
+                class="px-4 py-2 rounded-full border border-[var(--color-text-1)] theme-text-1 font-semibold hover:bg-[var(--color-text-1)] hover:text-[var(--color-bg-1)] transition-all"
+                >Contact</a
+              >
+            </div>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button
+              id="menu-button"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md theme-text-main hover:text-white focus:outline-none"
+            >
+              <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div
+        id="menu-panel"
+        class="hidden md:hidden absolute w-full theme-bg-2 border-b border-[var(--color-text-6)] shadow-xl"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#hero"
+            class="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]"
+            >Skills</a
+          >
+          <a
+            href="#career"
+            class="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]"
+            >Career</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]"
+            >Contact</a
+          >
         </div>
       </div>
     </nav>
 
-    <main
-      class="antialiased h-screen snap-y snap-mandatory overflow-y-scroll scroll-auto"
-    >
-      <section id="hero" class="snap-center">
-        <div class="p-5 items-center grid md:grid-cols-2 hero-background">
-          <div class="m-6">
-            <div class="m-2 global-title">GERARDO</div>
-            <div class="m-2 global-title-2">Bug maker</div>
-            <div class="m-2 global-text">
-              <a>
-                Programador motivado por su pasion de aprender cosas nuevas.
-                Experto en identificar problemas y preguntarle a chatsito como
-                resolverlos.
+    <!-- Main Content -->
+    <main>
+      <!-- HERO SECTION -->
+      <section
+        id="hero"
+        class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden"
+      >
+        <!-- Decorative background element -->
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--color-text-6)] rounded-full blur-[120px] opacity-10 pointer-events-none"
+        ></div>
+
+        <div
+          class="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center relative z-10"
+        >
+          <div class="space-y-6 text-center md:text-left">
+            <p class="theme-text-2 font-mono text-lg tracking-wider">
+              HI, I AM
+            </p>
+            <h1
+              class="text-6xl md:text-8xl font-bold tracking-tight theme-text-1 leading-none"
+            >
+              GERARDO
+            </h1>
+            <h2 class="text-4xl md:text-5xl font-bold theme-text-5 opacity-90">
+              Bug Maker.
+            </h2>
+            <p
+              class="text-lg md:text-xl theme-text-main max-w-lg mx-auto md:mx-0 leading-relaxed opacity-80"
+            >
+              Programador motivado por su pasión de aprender cosas nuevas.
+              Experto en identificar problemas y preguntarle a la IA cómo
+              resolverlos.
+            </p>
+
+            <div
+              class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start"
+            >
+              <a
+                href="#contact"
+                class="px-8 py-3 rounded-lg theme-bg-2 theme-text-1 font-bold border border-[var(--color-text-1)] hover:bg-[var(--color-text-1)] hover:text-[var(--color-bg-1)] transition-all text-center"
+              >
+                Get in Touch
               </a>
-              <a> Puede encontrar el código en el repositorio:</a>
               <a
-                href="https://github.com/Gmatiasvc/lenty-sunflower"
-                class="global-hyperlink"
-                >https://github.com/Gmatiasvc/lenty-sunflower</a
+                href="https://github.com/Gmatiasvc"
+                target="_blank"
+                class="px-8 py-3 rounded-lg border border-[var(--color-text-6)] theme-text-6 hover:bg-[var(--color-text-6)] hover:text-[var(--color-bg-1)] transition-all flex items-center justify-center gap-2"
               >
-              y la pagina web está en vivo en
-              <a
-                href="https://gmatiasvc.github.io/lenty-sunflower"
-                class="global-hyperlink"
-                >https://gmatiasvc.github.io/lenty-sunflower</a
+                <i data-lucide="github" class="w-5 h-5"></i> GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="flex justify-center md:justify-end relative group">
+            <!-- Image Frame with Dynamic Border Color -->
+            <div class="relative w-72 h-72 md:w-96 md:h-96">
+              <div
+                class="absolute inset-0 border-2 border-[var(--color-text-3)] rounded-2xl transform translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"
+              ></div>
+              <div
+                class="absolute inset-0 theme-bg-2 rounded-2xl overflow-hidden shadow-2xl"
               >
-              mediante el uso de github pages.
-            </div>
-            <div class="flex m-4">
-              <div class="p-2 global-button">CONTACT</div>
-              <div class="p-2 global-button">ABOUT</div>
-            </div>
-          </div>
-          <div class="m-3 justify-center hidden md:flex">
-            <img
-              src="https://placehold.co/600x400?text=Placeholder\nImage"
-              alt="Un placeholder"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="snap-center scroll-p">
-        <div class="p-5 items-center grid md:grid-cols-2 about-background">
-          <div class="m-3 p-2 hidden md:grid md:grid-rows-3">
-            <div class="global-title">ABOUT ME</div>
-            <div class="global-title-2 flex m-4">
-              <p>I use debian btw</p>
-            </div>
-          </div>
-          <div class="m-3 p-2">
-            <div class="p-2 grid md:hidden">
-              <div class="global-title">ABOUT ME</div>
-              <div class="global-title-2 bottom">
-                <p>I use debian btw</p>
-              </div>
-            </div>
-            <div class="global-text m-2">
-              Empece a programar desde temprana edad durante la pandemia de
-              2020, donde empecé a desarrollar scripts y tuis en python en mi
-              tiempo libre. Durante el mismo tiempo cambié de windows a
-              distribuciones de linux basadas en debian, empezando en elementary
-              OS, pase a Ubuntu y llegué a debian (donde ahora uso Hyprland como
-              WM). Empecé a estudiar en la Universidad Nacional de Trujillo a
-              los 16 años y durante mi educacion universitaria he desarrollado
-              una replica de tetris en c++, una base de datos no SQL en java y
-              conexiones cliente/servidor en mis primeros 3 semestres
-              respetivamente.
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- WIP
-      <section id="personal" class="snap-center">
-        <div class="p-0 h-screen flex personal-background">
-          <div class="bg-rose-500 w-36 hidden md:flex">deco</div>
-          <div class="bg-rose-500 m-4 ml-9mt-12 p-2 w-72 hidden xl:flex">
-            fam img
-          </div>
-
-          <div class="bg-rose-500 m-4 mt-12 p-2 flex-1">
-            FAMILIA Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Quisquam soluta, quos maxime repellat laboriosam neque tempora
-            voluptates doloremque vero adipisci nobis at iure fuga natus ipsa
-            culpa illo ullam. Nulla.
-          </div>
-
-          <div class="bg-rose-500 m-4 mr-9 mt-12 p-2 w-72 hidden xl:flex">
-            social
-          </div>
-          <div class="bg-rose-500 w-36 hidden md:flex">deco</div>
-        </div>
-      </section>
--->
-      <section id="skills" class="snap-center">
-        <div class="p-5 items-center grid md:grid-cols-2 skills-background">
-          <div class="m-3 p-2">
-            <div class="global-title m-2">Skills</div>
-            <div class="global-text m-2">
-              Tengo experiencia en distintos lenguajes de programacion y
-              distintas tecnologias. Ademas tengo la capacidad de aprender
-              nuevas habilidades facil y rápidamente.
-            </div>
-            <div class="m-3 flex md:hidden justify-center">
-              <div class="global-title-3 m-2">
-                <ul>
-                  <li>Python</li>
-                  <li>c++</li>
-                  <li>Java</li>
-                  <li>Tailwind</li>
-                  <li>MySQL</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="m-3 hidden md:flex justify-center">
-            <div class="global-title-3 m-2">
-              <ul>
-                <li>Python</li>
-                <li>c++</li>
-                <li>Java</li>
-                <li>Tailwind</li>
-                <li>MySQL</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="career" class="snap-center">
-        <div class="p-5 items-center grid md:flex career-background">
-          <div class="m-3 p-2">
-            <div class="global-title m-2 p-2">Career</div>
-            <div class="global-text m-2 p-2">
-              He desarrollado multiples sistemas durante los años, en mi pagina
-              de github podrás encontrar una selección curada de mis mejores
-              trabajos.
-            </div>
-            <div class="global-title-2 m-2 p-2">Proyectos publicos</div>
-            <div class="flex m-4">
-              <div class="global-title-3 m-2 p-2 flex-2">GITHUB REPO</div>
-              <div class="global-title-3 m-2 p-2 flex-2">GITHUB REPO</div>
-              <div class="global-title-3 m-2 p-2 flex-2 hidden md:flex">
-                GITHUB REPO
-              </div>
-              <div class="global-title-3 m-2 p-2 flex-2 hidden md:flex">
-                GITHUB REPO
-              </div>
-              <div class="global-title-3 m-2 p-2 flex-2 hidden lg:flex">
-                GITHUB REPO
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- To do later, maybe, maybe not, who knows?
-      <section id="portfolio" class="snap-center">
-        <div class="bg-indigo-400 p-5 h-screen">PERSONAL</div>
-      </section>
-
-      
-
-      <section id="blog" class="snap-center">
-        <div class="bg-lime-400 p-5 h-screen">BLOG</div>
-      </section>
-			-->
-      <section id="contact" class="snap-start">
-        <div class="p-5 items-center grid md:grid-cols-2 contact-background">
-          <div class="m-3 p-2">
-            <div class="global-title m-2">Contactame</div>
-            <div class="global-title-2 m-2">Alguna duda?</div>
-            <div class="global-text m-2">
-              Puedes enviarme un mensaje con el formulario de abajo o mediante
-              alguna de mis redes sociales.
-            </div>
-            <div class="flex m-2">
-              <div class="global-title-3 m-2">
-                <a href="https://www.github.com/gmatiasvc">GITHUB</a>
-              </div>
-              <div class="global-title-3 m-2">
-                <a href="https://www.instagram.com/gerarditochiquitito"
-                  >INSTAGRAM</a
-                >
-              </div>
-              <div class="global-title-3 m-2">
-                <a href="mailto:gmatiasvc@hotmail.com">EMAIL</a>
-              </div>
-            </div>
-
-            <div class="flex md:hidden justify-center">
-              <form action="">
-                <div class="grid">
-                  <label for="email" class="form-label pb-2"
-                    >Correo electronico</label
-                  >
-                  <input
-                    type="text"
-                    name="email"
-                    id="email-mobile"
-                    class="form-box pl-3 p-2"
-                    placeholder="example@mail.com"
-                    required=""
-                  />
-                </div>
-                <div class="grid sm:grid-cols-2">
-                  <div class="grid pr-0 sm:pr-2 pt-2 sm:pt-5">
-                    <label for="subject-mobile" class="form-label pb-2"
-                      >Asunto</label
-                    >
-                    <select id="subject-mobile" class="form-box pl-3 p-2">
-                      <option selected="" class="form-opt">
-                        Selecciona un asunto
-                      </option>
-                      <option value="CM" class="form-opt">Comision</option>
-                      <option value="LG" class="form-opt">Legal</option>
-                      <option value="WK" class="form-opt">Laboral</option>
-                      <option value="OT" class="form-opt">Otro</option>
-                    </select>
-                  </div>
-
-                  <div class="grid pr-0 sm:pl-2 pt-2 sm:pt-5">
-                    <label for="loc-mobile" class="form-label pb-2"
-                      >Ubicacion</label
-                    >
-                    <select id="loc-mobile" class="form-box pl-3 p-2">
-                      <option selected="" class="form-opt">
-                        Selecciona una region
-                      </option>
-                      <option value="PRU" class="form-opt">Perú</option>
-                      <option value="LAT" class="form-opt">
-                        Lationamerica
-                      </option>
-                      <option value="AME" class="form-opt">America</option>
-                      <option value="WST" class="form-opt">
-                        Europa/Africa
-                      </option>
-                      <option value="EST" class="form-opt">Asia/Oceania</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="grid pr-0 sm:pr-2 pt-2 sm:pt-5">
-                  <label for="msg-mobile" class="form-label pb-2"
-                    >Mensaje</label
-                  >
-                  <textarea
-                    id="msg-mobile"
-                    rows="4"
-                    class="form-box pl-3 p-2"
-                    placeholder="Escribe tu mensaje"
-                  ></textarea>
-                </div>
-                <div class="grid sm:grid-cols-2">
-                  <div class="grid pr-8 pl-8 pt-8 sm:pt-5">
-                    <button type="submit" class="form-button p-1">
-                      Enviar
-                    </button>
-                  </div>
-
-                  <div class="grid pr-8 pl-8 pt-3 sm:pt-5">
-                    <button type="reset" class="form-button p-1">
-                      Reiniciar
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <div class="hidden md:flex justify-center m-5">
-            <form action="">
-              <div class="grid">
-                <label for="email" class="form-label pb-2"
-                  >Correo electronico</label
-                >
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  class="form-box pl-3 p-2"
-                  placeholder="example@mail.com"
-                  required=""
+                <!-- Using a darker placeholder that fits themes better -->
+                <img
+                  src="https://placehold.co/600x600/1a1b26/FFF?text=GV"
+                  alt="Profile Placeholder"
+                  class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
                 />
               </div>
-              <div class="grid sm:grid-cols-2">
-                <div class="grid pr-0 sm:pr-2 pt-2 sm:pt-5">
-                  <label for="subject" class="form-label pb-2">Asunto</label>
-                  <select id="subject" class="form-box pl-3 p-2">
-                    <option selected="" class="form-opt">
-                      Selecciona un asunto
-                    </option>
-                    <option value="CM" class="form-opt">Comision</option>
-                    <option value="LG" class="form-opt">Legal</option>
-                    <option value="WK" class="form-opt">Laboral</option>
-                    <option value="OT" class="form-opt">Otro</option>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div
+          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+        >
+          <i data-lucide="arrow-down" class="w-6 h-6 theme-text-6"></i>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section
+        id="about"
+        class="min-h-screen flex items-center justify-center py-20 px-6"
+      >
+        <div class="max-w-6xl w-full">
+          <div class="grid md:grid-cols-12 gap-12">
+            <!-- Title Column -->
+            <div class="md:col-span-4 space-y-4">
+              <h2 class="text-5xl font-bold theme-text-1">ABOUT ME</h2>
+              <div class="h-1 w-20 theme-bg-2"></div>
+              <p
+                class="theme-text-3 font-mono text-sm uppercase tracking-widest mt-4"
+              >
+                I use Debian btw
+              </p>
+            </div>
+
+            <!-- Content Column -->
+            <div class="md:col-span-8">
+              <div
+                class="theme-bg-2 p-8 rounded-2xl border-l-4 border-[var(--color-text-2)] shadow-lg hover:shadow-2xl transition-all duration-500"
+              >
+                <p class="text-lg leading-loose theme-text-main opacity-90">
+                  Empecé a programar desde temprana edad durante la pandemia de
+                  2020, donde comencé a desarrollar scripts y TUIs en Python en
+                  mi tiempo libre.
+                  <br /><br />
+                  Durante ese tiempo migré de Windows a distribuciones Linux
+                  basadas en Debian, pasando por Elementary OS y Ubuntu hasta
+                  llegar a Debian puro (donde ahora uso Hyprland como WM).
+                  <br /><br />
+                  <span class="theme-text-5 font-semibold">Educación:</span>
+                  Universidad Nacional de Trujillo. He desarrollado una réplica
+                  de Tetris en C++, una base de datos NoSQL en Java y conexiones
+                  cliente/servidor.
+                </p>
+              </div>
+
+              <!-- Stats or Quick Info -->
+              <div class="grid grid-cols-3 gap-4 mt-8">
+                <div
+                  class="text-center p-4 rounded-lg border border-[var(--color-text-6)]/20"
+                >
+                  <span class="block text-3xl font-bold theme-text-2">3+</span>
+                  <span class="text-xs theme-text-6 uppercase"
+                    >Años Codeando</span
+                  >
+                </div>
+                <div
+                  class="text-center p-4 rounded-lg border border-[var(--color-text-6)]/20"
+                >
+                  <span class="block text-3xl font-bold theme-text-3">10+</span>
+                  <span class="text-xs theme-text-6 uppercase">Proyectos</span>
+                </div>
+                <div
+                  class="text-center p-4 rounded-lg border border-[var(--color-text-6)]/20"
+                >
+                  <span class="block text-3xl font-bold theme-text-4"
+                    >100%</span
+                  >
+                  <span class="text-xs theme-text-6 uppercase">Linux User</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section
+        id="skills"
+        class="min-h-screen flex items-center justify-center py-20 px-6"
+      >
+        <div class="max-w-5xl w-full text-center">
+          <h2 class="text-5xl font-bold mb-6 theme-text-1">SKILLS</h2>
+          <p class="max-w-2xl mx-auto mb-16 theme-text-main text-lg opacity-80">
+            Tengo experiencia en distintos lenguajes de programación y
+            tecnologías. Además, poseo la capacidad de aprender nuevas
+            habilidades rápida y eficazmente.
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-6">
+            <!-- Skill Tags with Dynamic Colors -->
+            <!-- Note: We use inline styles for borders here because we want specific colors for specific skills based on the theme palette -->
+
+            <div
+              class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-1)] card-hover cursor-default"
+            >
+              <i
+                data-lucide="code-2"
+                class="w-8 h-8 mx-auto mb-2 theme-text-1"
+              ></i>
+              <span class="font-bold theme-text-main">Python</span>
+            </div>
+
+            <div
+              class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-2)] card-hover cursor-default"
+            >
+              <i
+                data-lucide="cpu"
+                class="w-8 h-8 mx-auto mb-2 theme-text-2"
+              ></i>
+              <span class="font-bold theme-text-main">C++</span>
+            </div>
+
+            <div
+              class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-3)] card-hover cursor-default"
+            >
+              <i
+                data-lucide="coffee"
+                class="w-8 h-8 mx-auto mb-2 theme-text-3"
+              ></i>
+              <span class="font-bold theme-text-main">Java</span>
+            </div>
+
+            <div
+              class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-4)] card-hover cursor-default"
+            >
+              <i
+                data-lucide="palette"
+                class="w-8 h-8 mx-auto mb-2 theme-text-4"
+              ></i>
+              <span class="font-bold theme-text-main">Tailwind</span>
+            </div>
+
+            <div
+              class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-5)] card-hover cursor-default"
+            >
+              <i
+                data-lucide="database"
+                class="w-8 h-8 mx-auto mb-2 theme-text-5"
+              ></i>
+              <span class="font-bold theme-text-main">MySQL</span>
+            </div>
+            <div
+              class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-6)] card-hover cursor-default"
+            >
+              <i
+                data-lucide="terminal"
+                class="w-8 h-8 mx-auto mb-2 theme-text-6"
+              ></i>
+              <span class="font-bold theme-text-main">Bash/Linux</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAREER / PROJECTS SECTION -->
+      <section
+        id="career"
+        class="min-h-screen flex items-center justify-center py-20 px-6"
+      >
+        <div class="max-w-7xl w-full">
+          <div class="mb-16">
+            <h2 class="text-5xl font-bold theme-text-1 mb-4">CAREER & WORK</h2>
+            <p class="theme-text-main text-xl opacity-80 max-w-2xl">
+              He desarrollado múltiples sistemas durante los años. Aquí una
+              selección curada de mis mejores trabajos públicos.
+            </p>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div
+              class="theme-bg-2 rounded-2xl overflow-hidden border border-[var(--color-text-6)]/30 card-hover flex flex-col h-full"
+            >
+              <div
+                class="h-48 w-full bg-[var(--color-text-6)]/10 flex items-center justify-center"
+              >
+                <i
+                  data-lucide="folder-git-2"
+                  class="w-16 h-16 theme-text-6 opacity-50"
+                ></i>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="text-xl font-bold mb-2 theme-text-1">
+                  Lenty Sunflower
+                </h3>
+                <p class="text-sm theme-text-main opacity-70 mb-4 flex-1">
+                  El proyecto actual. Un portafolio web con temas dinámicos
+                  basados en la posición del scroll.
+                </p>
+                <div class="flex gap-2 mb-4">
+                  <span
+                    class="text-xs px-2 py-1 rounded theme-bg-1 theme-text-4 border border-[var(--color-text-4)]/30"
+                    >HTML</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 rounded theme-bg-1 theme-text-4 border border-[var(--color-text-4)]/30"
+                    >JS</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 theme-text-5 hover:underline font-medium mt-auto"
+                >
+                  View Repository
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div
+              class="theme-bg-2 rounded-2xl overflow-hidden border border-[var(--color-text-6)]/30 card-hover flex flex-col h-full"
+            >
+              <div
+                class="h-48 w-full bg-[var(--color-text-2)]/10 flex items-center justify-center"
+              >
+                <i
+                  data-lucide="terminal-square"
+                  class="w-16 h-16 theme-text-2 opacity-50"
+                ></i>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="text-xl font-bold mb-2 theme-text-1">
+                  Tetris C++ Clone
+                </h3>
+                <p class="text-sm theme-text-main opacity-70 mb-4 flex-1">
+                  Una recreación fiel del clásico juego Tetris utilizando C++ y
+                  librerías gráficas básicas.
+                </p>
+                <div class="flex gap-2 mb-4">
+                  <span
+                    class="text-xs px-2 py-1 rounded theme-bg-1 theme-text-4 border border-[var(--color-text-4)]/30"
+                    >C++</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 rounded theme-bg-1 theme-text-4 border border-[var(--color-text-4)]/30"
+                    >Game Dev</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 theme-text-5 hover:underline font-medium mt-auto"
+                >
+                  View Repository
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div
+              class="theme-bg-2 rounded-2xl overflow-hidden border border-[var(--color-text-6)]/30 card-hover flex flex-col h-full"
+            >
+              <div
+                class="h-48 w-full bg-[var(--color-text-3)]/10 flex items-center justify-center"
+              >
+                <i
+                  data-lucide="database-zap"
+                  class="w-16 h-16 theme-text-3 opacity-50"
+                ></i>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="text-xl font-bold mb-2 theme-text-1">
+                  NoSQL Java DB
+                </h3>
+                <p class="text-sm theme-text-main opacity-70 mb-4 flex-1">
+                  Implementación de un motor de base de datos no relacional
+                  desde cero utilizando Java.
+                </p>
+                <div class="flex gap-2 mb-4">
+                  <span
+                    class="text-xs px-2 py-1 rounded theme-bg-1 theme-text-4 border border-[var(--color-text-4)]/30"
+                    >Java</span
+                  >
+                  <span
+                    class="text-xs px-2 py-1 rounded theme-bg-1 theme-text-4 border border-[var(--color-text-4)]/30"
+                    >Backend</span
+                  >
+                </div>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 theme-text-5 hover:underline font-medium mt-auto"
+                >
+                  View Repository
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section
+        id="contact"
+        class="min-h-screen flex items-center justify-center py-20 px-6"
+      >
+        <div class="max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Contact Info -->
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-5xl font-bold theme-text-1 mb-2">CONTACTAME</h2>
+              <h3 class="text-2xl font-medium theme-text-2">¿Alguna duda?</h3>
+            </div>
+
+            <p class="theme-text-main text-lg opacity-80 leading-relaxed">
+              Estoy siempre abierto a discutir nuevos proyectos, ideas creativas
+              o oportunidades para ser parte de tus visiones.
+            </p>
+
+            <div class="space-y-4">
+              <a
+                href="mailto:gmatiasvc@hotmail.com"
+                class="flex items-center gap-4 p-4 rounded-xl theme-bg-2 border border-[var(--color-text-6)]/20 hover:border-[var(--color-text-6)] transition-colors group"
+              >
+                <div
+                  class="p-3 rounded-full bg-[var(--color-bg-1)] theme-text-6 group-hover:theme-text-1 transition-colors"
+                >
+                  <i data-lucide="mail"></i>
+                </div>
+                <div>
+                  <p class="text-sm opacity-60 theme-text-main">Email me</p>
+                  <p class="font-medium theme-text-main">
+                    gmatiasvc@hotmail.com
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="https://github.com/Gmatiasvc"
+                class="flex items-center gap-4 p-4 rounded-xl theme-bg-2 border border-[var(--color-text-6)]/20 hover:border-[var(--color-text-6)] transition-colors group"
+              >
+                <div
+                  class="p-3 rounded-full bg-[var(--color-bg-1)] theme-text-6 group-hover:theme-text-1 transition-colors"
+                >
+                  <i data-lucide="github"></i>
+                </div>
+                <div>
+                  <p class="text-sm opacity-60 theme-text-main">GitHub</p>
+                  <p class="font-medium theme-text-main">@Gmatiasvc</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.instagram.com/gerarditochiquitito/"
+                class="flex items-center gap-4 p-4 rounded-xl theme-bg-2 border border-[var(--color-text-6)]/20 hover:border-[var(--color-text-6)] transition-colors group"
+              >
+                <div
+                  class="p-3 rounded-full bg-[var(--color-bg-1)] theme-text-6 group-hover:theme-text-1 transition-colors"
+                >
+                  <i data-lucide="instagram"></i>
+                </div>
+                <div>
+                  <p class="text-sm opacity-60 theme-text-main">Instagram</p>
+                  <p class="font-medium theme-text-main">
+                    @gerarditochiquitito
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div
+            class="theme-bg-2 p-8 rounded-3xl shadow-2xl border border-[var(--color-text-6)]/20"
+          >
+            <form action="#" class="space-y-6">
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium theme-text-5 mb-2"
+                  >Correo Electrónico</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="tu@email.com"
+                  class="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-1)] border border-[var(--color-text-6)] text-[var(--color-white)] focus:outline-none focus:ring-2 focus:ring-[var(--color-text-5)] transition-all"
+                />
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-sm font-medium theme-text-5 mb-2"
+                    >Asunto</label
+                  >
+                  <select
+                    id="subject"
+                    class="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-1)] border border-[var(--color-text-6)] text-[var(--color-white)] focus:outline-none focus:ring-2 focus:ring-[var(--color-text-5)] transition-all appearance-none"
+                  >
+                    <option>General</option>
+                    <option>Freelance</option>
+                    <option>Trabajo</option>
                   </select>
                 </div>
-
-                <div class="grid pr-0 sm:pl-2 pt-2 sm:pt-5">
-                  <label for="loc" class="form-label pb-2">Ubicacion</label>
-                  <select id="loc" class="form-box pl-3 p-2">
-                    <option selected="" class="form-opt">
-                      Selecciona una region
-                    </option>
-                    <option value="PRU" class="form-opt">Perú</option>
-                    <option value="LAT" class="form-opt">Lationamerica</option>
-                    <option value="AME" class="form-opt">America</option>
-                    <option value="WST" class="form-opt">Europa/Africa</option>
-                    <option value="EST" class="form-opt">Asia/Oceania</option>
+                <div>
+                  <label
+                    for="loc"
+                    class="block text-sm font-medium theme-text-5 mb-2"
+                    >Ubicación</label
+                  >
+                  <select
+                    id="loc"
+                    class="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-1)] border border-[var(--color-text-6)] text-[var(--color-white)] focus:outline-none focus:ring-2 focus:ring-[var(--color-text-5)] transition-all appearance-none"
+                  >
+                    <option>Perú</option>
+                    <option>Latam</option>
+                    <option>Global</option>
                   </select>
                 </div>
               </div>
-              <div class="grid pr-0 sm:pr-2 pt-2 sm:pt-5">
-                <label for="msg" class="form-label pb-2">Mensaje</label>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium theme-text-5 mb-2"
+                  >Mensaje</label
+                >
                 <textarea
-                  id="msg"
+                  id="message"
                   rows="4"
-                  class="form-box pl-3 p-2"
-                  placeholder="Escribe tu mensaje"
+                  placeholder="Escribe tu mensaje aquí..."
+                  class="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-1)] border border-[var(--color-text-6)] text-[var(--color-white)] focus:outline-none focus:ring-2 focus:ring-[var(--color-text-5)] transition-all resize-none"
                 ></textarea>
               </div>
-              <div class="grid sm:grid-cols-2">
-                <div class="grid pr-8 pl-8 pt-8 sm:pt-5">
-                  <button type="submit" class="form-button p-1">Enviar</button>
-                </div>
 
-                <div class="grid pr-8 pl-8 pt-3 sm:pt-5">
-                  <button type="reset" class="form-button p-1">
-                    Reiniciar
-                  </button>
-                </div>
+              <div class="flex gap-4 pt-2">
+                <button
+                  type="submit"
+                  class="flex-1 py-3 px-6 rounded-lg theme-bg-1 theme-text-4 font-bold border border-[var(--color-text-4)] hover:bg-[var(--color-text-4)] hover:text-[var(--color-bg-1)] transition-all"
+                >
+                  Enviar Mensaje
+                </button>
+                <button
+                  type="reset"
+                  class="px-6 rounded-lg theme-text-6 border border-[var(--color-text-6)] hover:bg-[var(--color-text-6)] hover:text-[var(--color-bg-1)] transition-all"
+                >
+                  <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                </button>
               </div>
             </form>
           </div>
         </div>
       </section>
 
-      <section id="footer" class="snap-center">
-        <div class="foot-background bar-font p-5 flex">
-          <div class="m-2">
-            <p>Diseñado por:</p>
-            <p>Gerardo Venegas</p>
+      <!-- FOOTER -->
+      <footer
+        id="footer"
+        class="py-12 border-t border-[var(--color-text-6)]/20 theme-bg-1"
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center"
+        >
+          <div>
+            <h3 class="text-xl font-bold theme-text-1">Gerardo Venegas</h3>
+            <p class="theme-text-main opacity-60 mt-2">
+              Diseñado y desarrollado con ❤️ y mucho café.
+            </p>
           </div>
-          <div class="flex m-2">
-            <div>
-              <p>IG: @gerarditochiquitito</p>
-              <p>GITHUB: Gmatiasvc</p>
-            </div>
-            <div class="ml-2">
-              <p>EMAIL: gmatiasvc@hotmail.com</p>
-              <p>NUM: +51 938108431</p>
-              <p>Curriculum</p>
-            </div>
+          <div
+            class="flex flex-col md:items-end gap-2 text-sm theme-text-main opacity-80"
+          >
+            <p>gmatiasvc@hotmail.com</p>
+            <p>Trujillo, Perú</p>
+            <p>&copy; 2024 All rights reserved.</p>
           </div>
         </div>
-      </section>
+      </footer>
     </main>
+
+    <!-- THEME TOGGLE BUTTON -->
     <button
       id="theme-toggle"
-      class="fixed bottom-4 left-4 z-50 p-3 rounded-full bg-white text-black shadow-lg hover:scale-110 transition-transform duration-200 cursor-pointer"
+      class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-[var(--color-white)] text-[var(--color-bg-1)] shadow-2xl hover:scale-110 transition-transform duration-200 cursor-pointer border-2 border-[var(--color-bg-1)]"
       aria-label="Toggle Theme"
     >
-      <svg
-        id="theme-icon"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <circle cx="12" cy="12" r="5"></circle>
-        <path
-          d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
-        ></path>
-      </svg>
+      <i data-lucide="sun-moon" class="w-6 h-6"></i>
     </button>
   </body>
 </html>

@@ -1,3 +1,22 @@
+// Initialize Icons
+lucide.createIcons();
+
+// --- MENU LOGIC ---
+const menuButton = document.getElementById('menu-button');
+const menuPanel = document.getElementById('menu-panel');
+
+menuButton.addEventListener('click', (e) => {
+	e.stopPropagation();
+	menuPanel.classList.toggle('hidden');
+});
+
+document.addEventListener('click', (event) => {
+	if (!menuPanel.contains(event.target) && !menuButton.contains(event.target)) {
+		menuPanel.classList.add('hidden');
+	}
+});
+
+// --- THEME OBSERVER LOGIC (Core Feature) ---
 document.addEventListener("DOMContentLoaded", () => {
 	const sections = document.querySelectorAll("section");
 	const root = document.documentElement;
@@ -9,8 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
 	const options = {
 	  root: null,
-	  rootMargin: "0px",
-	  threshold: 0.6
+	  rootMargin: "-20% 0px -20% 0px", // Trigger when section is mostly in view
+	  threshold: 0.4
 	};
   
 	// Helper function to update the root variables based on theme and section
@@ -19,15 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
   
 	  const computedStyle = window.getComputedStyle(section);
 	  
-	  // Helper to get variable value safely
 	  const getVar = (name) => {
-		// Tries to get --light-black-1 or --dark-black-1
+		// Tries to get --light-bg-1 or --dark-bg-1 based on theme
 		const val = computedStyle.getPropertyValue(`--${currentTheme}-${name}`).trim();
-		return val || computedStyle.getPropertyValue(`--dark-${name}`).trim(); // Fallback to dark if light is missing
+		return val || computedStyle.getPropertyValue(`--dark-${name}`).trim(); 
 	  };
   
-	  // Update global properties using the prefix (dark or light)
-	  // Note: This expects your CSS to have matching names like --light-black-1
+	  // Update global CSS variables
 	  root.style.setProperty('--color-bg-1', getVar('bg-1'));
 	  root.style.setProperty('--color-bg-2', getVar('bg-2'));
 	  root.style.setProperty('--color-white', getVar('text'));
@@ -52,29 +69,29 @@ document.addEventListener("DOMContentLoaded", () => {
 	  });
 	};
   
-	// 1. Start Observer
 	const observer = new IntersectionObserver(callback, options);
 	sections.forEach(section => {
 	  observer.observe(section);
 	});
   
-	// 2. Button Event Listener
+	// Toggle Logic
 	if (toggleBtn) {
 	  toggleBtn.addEventListener('click', () => {
-		// Toggle state
 		currentTheme = currentTheme === "dark" ? "light" : "dark";
 		
-		// Update Button visual (optional, simple color flip)
+		// Visual toggle update
 		if(currentTheme === "light") {
-			toggleBtn.style.backgroundColor = "#1c1d21"; // dark bg for button
+			// In light mode, button is dark
+			toggleBtn.style.backgroundColor = "#1c1d21"; 
 			toggleBtn.style.color = "#ffffff";
 		} else {
-			toggleBtn.style.backgroundColor = "#ffffff"; // light bg for button
+			// In dark mode, button is light
+			toggleBtn.style.backgroundColor = "#ffffff"; 
 			toggleBtn.style.color = "#000000";
 		}
   
-		// Re-apply colors to current section
+		// Re-apply colors
 		updateColors(currentSection);
 	  });
 	}
-  });
+});

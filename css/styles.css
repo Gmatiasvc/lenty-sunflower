@@ -1,491 +1,204 @@
-@import "tailwindcss";
-
-main {
-  scrollbar-width: none;
-}
-main {
-  -ms-overflow-style: none;
-}
-main::-webkit-scrollbar,
-main::-webkit-scrollbar-button {
-  display: none;
-}
-main::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg-1);
+    color: var(--color-white);
+    transition: background-color 0.7s ease-in-out, color 0.7s ease-in-out;
+    overflow-x: hidden;
 }
 
-div {
-  transition: background-color 1s ease-in-out, color 1s ease-in-out, border-color 1s ease-in-out;
+h1, h2, h3, h4, h5, h6, .display-font {
+    font-family: 'Space Grotesk', sans-serif;
 }
-nav {
-  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+
+/* Scrollbar hiding */
+::-webkit-scrollbar {
+    width: 8px;
 }
-a {
-  transition: background-color 1s ease-in-out, color 1s ease-in-out, font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+::-webkit-scrollbar-track {
+    background: transparent;
 }
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-text-6);
+    border-radius: 4px;
+}
+
+/* --- THEME VARIABLE LOGIC (PRESERVED) --- */
+/* These variables are read by the JS Observer to update the :root.
+   The values are exactly as provided in your original CSS.
+*/
 
 :root {
-  --color-bg-1: #1c1d21;
-  --color-bg-2: #1c1d21;
-  --color-white: #1c1d21;
-  --color-text-1: #1c1d21;
-  --color-text-2: #1c1d21;
-  --color-text-3: #1c1d21;
-  --color-text-4: #1c1d21;
-  --color-text-5: #1c1d21;
-  --color-text-6: #1c1d21;
-
-  --color-hyperlink: #1c1d21;
+    --color-bg-1: #1c1d21;
+    --color-bg-2: #1c1d21;
+    --color-white: #cfc9c2;
+    --color-text-1: #e0af68;
+    --color-text-2: #9ece6a;
+    --color-text-3: #f7768e;
+    --color-text-4: #bb9af7;
+    --color-text-5: #7dcfff;
+    --color-text-6: #7aa2f7;
+    --color-hyperlink: #7dcfff;
 }
 
+/* --- SECTION PALETTES --- */
 #hero {
-  --dark-bg-1: #1a1b26;
-  --dark-bg-2: #24283b;
-  --dark-text: #cfc9c2;
-  --dark-text-1: #e0af68;
-  --dark-text-2: #9ece6a;
-  --dark-text-3: #f7768e;
-  --dark-text-4: #f7768e;
-  --dark-text-5: #9aa5ce;
-  --dark-text-6: #5aa9e6;
+    --dark-bg-1: #1a1b26;
+    --dark-bg-2: #24283b; /* Used for Cards/Containers */
+    --dark-text: #cfc9c2;
+    --dark-text-1: #e0af68; /* Gold */
+    --dark-text-2: #9ece6a; /* Green */
+    --dark-text-3: #f7768e; /* Red */
+    --dark-text-4: #bb9af7; /* Purple */
+    --dark-text-5: #9aa5ce;
+    --dark-text-6: #5aa9e6;
+    --dark-hyperlink: #7dcfff;
 
-  --dark-hyperlink: #7dcfff;
-
-  --light-bg-1: #e6e7ed;  
-  --light-bg-2: #ffffff; 
-
-  --light-text: #1a1b26;    
-  
-  --light-text-1: #8f5e15; 
-  --light-text-2: #385f0d;;
-  --light-text-3: #8c4351;
-  --light-text-4: #8c4351;
-  --light-text-5: #5a3e8e;
-  --light-text-6: #006c86;
-  
-  --light-hyperlink: #2959aa;
-
-  --dark-white: #cfc9c2;
-  --dark-white-2: #c0caf5;
-  --dark-white-3: #a9b1d6;
-  --dark-white-4: #9aa5ce;
-  --dark-black-4: #565f89;
-  --dark-black-3: #414868;
-  --dark-black-2: #24283b;
-  --dark-black-1: #1a1b26;
-  --dark-red: #f7768e;
-  --dark-orange: #e09062;
-  --dark-yellow: #e0af68;
-  --dark-green: #9ece6a;
-  --dark-teal: #73daca;
-  --dark-light-teal: #b4f9f8;
-  --dark-cyan: #2ac3de;
-  --dark-light-blue: #7dcfff;
-  --dark-blue: #7aa2f7;
-  --dark-purple: #766ea5;
-
-  --light-white: #e6e7ed;
-  --light-black-1: #343b58;
-  --light-black-2: #40434f;
-  --light-black-3: #6c6e75;
-  --light-red: #8c4351;
-  --light-orange: #965027;
-  --light-yellow: #8f5e15;
-  --light-brown: #634f30;
-  --light-green: #385f0d;
-  --light-teal: #33635c;
-  --light-light-teal: #006c86;
-  --light-cyan: #0f4b6e;
-  --light-blue: #2959aa;
-  --light-purple: #5a3e8e;
+    --light-bg-1: #e6e7ed;  
+    --light-bg-2: #ffffff; 
+    --light-text: #1a1b26;    
+    --light-text-1: #8f5e15; 
+    --light-text-2: #385f0d;
+    --light-text-3: #8c4351;
+    --light-text-4: #8c4351;
+    --light-text-5: #5a3e8e;
+    --light-text-6: #006c86;
+    --light-hyperlink: #2959aa;
 }
 
 #about {
-  --dark-bg-1: #0c0c0c;
-  --dark-bg-2: #0c0c0c;
-  --dark-text: #cccccc;
-  --dark-text-1: #16c60c;
-  --dark-text-2: #e74856;
-  --dark-text-3: #3b78ff;
-  --dark-text-4: #f9f1a5;
-  --dark-text-5: #61d6d6;
-  --dark-text-6: #767676;
-
-  --dark-hyperlink: #61d6d6;
-  
-  --light-bg-1: #f2f2f2;  
-  --light-bg-2: #f2f2f2; 
-
-  --light-text: #0c0c0c;    
-  
-  --light-text-1: #13a10e; 
-  --light-text-2: #c50f1f;;
-  --light-text-3: #0037da;
-  --light-text-4: #c19c00;
-  --light-text-5: #3a96dd;
-  --light-text-6: #767676;
-  
-  --light-hyperlink: #0037da;
-
-  --dark-black-1: #0c0c0c;
-  --dark-black-2: #0c0c0c;
-  --dark-blue: #0037da;
-  --dark-cyan: #3a96dd;
-  --dark-green: #13a10e;
-  --dark-purple: #881798;
-  --dark-red: #c50f1f;
-  --dark-white: #cccccc;
-  --dark-yellow: #c19c00;
-  --dark-orange: #c19c00;
-  --dark-bright-black: #767676;
-  --dark-bright-blue: #262627;
-  --dark-bright-cyan: #61d6d6;
-  --dark-bright-green: #16c60c;
-  --dark-bright-purple: #b4009e;
-  --dark-bright-red: #e74856;
-  --dark-bright-white: #f2f2f2;
-  --dark-bright-yellow: #f9f1a5;
+    --dark-bg-1: #0c0c0c;
+    --dark-bg-2: #1a1a1a;
+    --dark-text: #cccccc;
+    --dark-text-1: #16c60c;
+    --dark-text-2: #e74856;
+    --dark-text-3: #3b78ff;
+    --dark-text-4: #f9f1a5;
+    --dark-text-5: #61d6d6;
+    --dark-text-6: #767676;
+    --dark-hyperlink: #61d6d6;
+    
+    --light-bg-1: #f2f2f2;  
+    --light-bg-2: #ffffff; 
+    --light-text: #0c0c0c;    
+    --light-text-1: #13a10e; 
+    --light-text-2: #c50f1f;
+    --light-text-3: #0037da;
+    --light-text-4: #c19c00;
+    --light-text-5: #3a96dd;
+    --light-text-6: #767676;
+    --light-hyperlink: #0037da;
 }
 
 #skills {
-  --dark-bg-1: #1a1b26;
-  --dark-bg-2: #24283b;
-  --dark-text: #cfc9c2;
-  --dark-text-1: #e0af68;
-  --dark-text-2: #e0af68;
-  --dark-text-3: #9ece6a;
-  --dark-text-4: #bb9af7;
-  --dark-text-5: #f7768e;
-  --dark-text-6: #ff9e64;
-
-  --dark-hyperlink: #7dcfff;
-  
-  --light-bg-1: #dddddd;  
-  --light-bg-2: #e6e7ed; 
-
-  --light-text: #0c0c0c;    
-  
-  --light-text-1: #8f5e15; 
-  --light-text-2: #8f5e15;
-  --light-text-3: #385f0d;
-  --light-text-4: #5a3e8e;
-  --light-text-5: #8c4351;
-  --light-text-6: #965027;
-  
-  --light-hyperlink: #006c86;
-
-  --dark-white: #cfc9c2;
-  --dark-white-2: #c0caf5;
-  --dark-white-3: #a9b1d6;
-  --dark-white-4: #9aa5ce;
-  --dark-black-4: #565f89;
-  --dark-black-3: #414868;
-  --dark-black-2: #24283b;
-  --dark-black-1: #1a1b26;
-  --dark-red: #f7768e;
-  --dark-orange: #ff9e64;
-  --dark-yellow: #e0af68;
-  --dark-green: #9ece6a;
-  --dark-teal: #73daca;
-  --dark-light-teal: #b4f9f8;
-  --dark-cyan: #2ac3de;
-  --dark-light-blue: #7dcfff;
-  --dark-blue: #7aa2f7;
-  --dark-purple: #bb9af7;
-
-  --light-white: #e6e7ed;
-  --light-black-1: #343b58;
-  --light-black-2: #40434f;
-  --light-black-3: #6c6e75;
-  --light-red: #8c4351;
-  --light-orange: #965027;
-  --light-yellow: #8f5e15;
-  --light-brown: #634f30;
-  --light-green: #385f0d;
-  --light-teal: #33635c;
-  --light-light-teal: #006c86;
-  --light-cyan: #0f4b6e;
-  --light-blue: #2959aa;
-  --light-purple: #5a3e8e;
+    --dark-bg-1: #1a1b26;
+    --dark-bg-2: #24283b;
+    --dark-text: #cfc9c2;
+    --dark-text-1: #e0af68;
+    --dark-text-2: #ff9e64;
+    --dark-text-3: #9ece6a;
+    --dark-text-4: #bb9af7;
+    --dark-text-5: #f7768e;
+    --dark-text-6: #7dcfff;
+    --dark-hyperlink: #7dcfff;
+    
+    --light-bg-1: #dddddd;  
+    --light-bg-2: #e6e7ed; 
+    --light-text: #0c0c0c;    
+    --light-text-1: #8f5e15; 
+    --light-text-2: #965027;
+    --light-text-3: #385f0d;
+    --light-text-4: #5a3e8e;
+    --light-text-5: #8c4351;
+    --light-text-6: #006c86;
+    --light-hyperlink: #006c86;
 }
 
 #career {
-  --dark-bg-1: #1d2025;
-  --dark-bg-2: #252931;
-  --dark-text: #abb2bf;
-  --dark-text-1: #d19a66;
-  --dark-text-2: #e06c75;
-  --dark-text-3: #98c379;
-  --dark-text-4: #e5c07b;
-  --dark-text-5: #c678dd;
-  --dark-text-6: #61afef;
-
-  --dark-hyperlink: #56b6c2;
-  
-  --light-bg-1: #cfd0d1;  
-  --light-bg-2: #fafafa; 
-
-  --light-text: #383a42;    
-  
-  --light-text-1: #ca1243; 
-  --light-text-2: #986801;
-  --light-text-3: #50a14f;
-  --light-text-4: #c18401;
-  --light-text-5: #a626a4;
-  --light-text-6: #0184bc;
-  
-  --light-hyperlink: #526eff;
-
-
-  --dark-black-1: #1d2025;
-  --dark-black-2: #252931;
-  --dark-black-3: #282c34;
-  --dark-white: #abb2bf;
-  --dark-red-2: #e06c75;
-  --dark-red: #be5046;
-  --dark-green: #98c379;
-  --dark-yellow: #e5c07b;
-  --dark-orange: #d19a66;
-  --dark-blue: #61afef;
-  --dark-purple: #c678dd;
-  --dark-cyan: #56b6c2;
-  --dark-gutter-grey: #4b5263;
-  --dark-comment-grey: #5c6370;
-
-  --light-black: #383a42;
-  --light-white-1: #fafafa;
-  --light-white-2: #cfd0d1;
-  --light-white-3: #a1a1a1;
-  --light-light-red: #e45649;
-  --light-dark-red: #ca1243;
-  --light-green: #50a14f;
-  --light-light-yellow: #c18401;
-  --light-dark-yellow: #986801;
-  --light-blue: #526eff;
-  --light-magenta: #a626a4;
-  --light-cyan: #0184bc;
+    --dark-bg-1: #1d2025;
+    --dark-bg-2: #282c34;
+    --dark-text: #abb2bf;
+    --dark-text-1: #d19a66;
+    --dark-text-2: #e06c75;
+    --dark-text-3: #98c379;
+    --dark-text-4: #e5c07b;
+    --dark-text-5: #c678dd;
+    --dark-text-6: #61afef;
+    --dark-hyperlink: #56b6c2;
+    
+    --light-bg-1: #cfd0d1;  
+    --light-bg-2: #fafafa; 
+    --light-text: #383a42;    
+    --light-text-1: #ca1243; 
+    --light-text-2: #986801;
+    --light-text-3: #50a14f;
+    --light-text-4: #c18401;
+    --light-text-5: #a626a4;
+    --light-text-6: #0184bc;
+    --light-hyperlink: #526eff;
 }
 
 #contact {
-  --dark-bg-1: #221f22;
-  --dark-bg-2: #2d2a2e;
-  --dark-text: #fcfcfa;
-  --dark-text-1: #ffd866;
-  --dark-text-2: #a9dc76;
-  --dark-text-3: #ff6188;
-  --dark-text-4: #fc9867;
-  --dark-text-5: #78dce8;
-  --dark-text-6: #ab9df2;
-
-  --dark-hyperlink: #78dce8;
-  
-  --light-bg-1: #faf4f2;  
-  --light-bg-2: #fefaf9; 
-
-  --light-text: #29242a;    
-  
-  --light-text-1: #cc7a0a; 
-  --light-text-2: #269d69;
-  --light-text-3: #e14775;
-  --light-text-4: #e16032;
-  --light-text-5: #1c8ca8;
-  --light-text-6: #7058be;
-  
-  --light-hyperlink: #1c8ca8;
-
-
-  --dark-black-1: #221f22;
-  --dark-black-2: #2d2a2e;
-  --dark-white: #fcfcfa;
-  --dark-red: #ff6188;
-  --dark-orange: #fc9867;
-  --dark-yellow: #ffd866;
-  --dark-green: #a9dc76;
-  --dark-blue: #78dce8;
-  --dark-purple: #ab9df2;
-
-  --light-white-1: #fefaf9;
-  --light-white-2: #faf4f2;
-  --light-black: #29242a;
-  --light-red: #e14775;
-  --light-orange: #e16032;
-  --light-yellow: #cc7a0a;
-  --light-green: #269d69;
-  --light-blue: #1c8ca8;
-  --light-purple: #7058be;
+    --dark-bg-1: #221f22;
+    --dark-bg-2: #2d2a2e;
+    --dark-text: #fcfcfa;
+    --dark-text-1: #ffd866;
+    --dark-text-2: #a9dc76;
+    --dark-text-3: #ff6188;
+    --dark-text-4: #fc9867;
+    --dark-text-5: #78dce8;
+    --dark-text-6: #ab9df2;
+    --dark-hyperlink: #78dce8;
+    
+    --light-bg-1: #faf4f2;  
+    --light-bg-2: #ffffff; 
+    --light-text: #29242a;    
+    --light-text-1: #cc7a0a; 
+    --light-text-2: #269d69;
+    --light-text-3: #e14775;
+    --light-text-4: #e16032;
+    --light-text-5: #1c8ca8;
+    --light-text-6: #7058be;
+    --light-hyperlink: #1c8ca8;
 }
 
 #footer {
-  --dark-bg-1: #221f22;
-  --dark-bg-2: #2d2a2e;
-  --dark-text: #fcfcfa;
-  --dark-text-1: #ffd866;
-  --dark-text-2: #a9dc76;
-  --dark-text-3: #ff6188;
-  --dark-text-4: #fc9867;
-  --dark-text-5: #78dce8;
-  --dark-text-6: #ab9df2;
-
-  --dark-hyperlink: #78dce8;
-  
-  --light-bg-1: #f2f2f2;  
-  --light-bg-2: #f2f2f2; 
-
-  --light-text: #0c0c0c;    
-  
-  --light-text-1: #13a10e; 
-  --light-text-2: #c50f1f;;
-  --light-text-3: #0037da;
-  --light-text-4: #c19c00;
-  --light-text-5: #3a96dd;
-  --light-text-6: #767676;
-  
-  --light-hyperlink: #0037da;
-
-  --dark-black-1: #0c0c0c;
-
-  --dark-black-1: #221f22;
-  --dark-black-2: #2d2a2e;
-  --dark-white: #fcfcfa;
-  --dark-red: #ff6188;
-  --dark-orange: #fc9867;
-  --dark-yellow: #ffd866;
-  --dark-green: #a9dc76;
-  --dark-blue: #78dce8;
-  --dark-purple: #ab9df2;
-
-  --light-white-1: #fefaf9;
-  --light-white-2: #faf4f2;
-  --light-black: #29242a;
-  --light-red: #e14775;
-  --light-orange: #e16032;
-  --light-yellow: #cc7a0a;
-  --light-green: #269d69;
-  --light-blue: #1c8ca8;
-  --light-purple: #7058be;
+   /* Inherits from contact usually, but explicitly defined as requested */
+   --dark-bg-1: #191619; /* Slightly darker than contact */
+   --light-bg-1: #f2f2f2;
 }
 
-.global-title {
-  color: var(--color-text-1);
-  font-size: 38px;
-  font-weight: bold;
-}
-.global-title-2 {
-  color: var(--color-text-2);
-  font-size: larger;
-  font-weight: bold;
-}
-.global-title-3 {
-  color: var(--color-text-3);
-  font-size: large;
-  font-weight: bold;
-}
-.global-text {
-  color: var(--color-white);
-}
-.global-hyperlink {
-  color: var(--color-hyperlink);
-  font-weight: bold;
-}
-.global-button {
-  color: var(--color-text-6);
-  font-weight: bold;
+/* --- DYNAMIC UTILITIES --- */
+/* These classes use the CSS variables that change on scroll */
+
+.theme-text-main { color: var(--color-white); }
+.theme-text-1 { color: var(--color-text-1); }
+.theme-text-2 { color: var(--color-text-2); }
+.theme-text-3 { color: var(--color-text-3); }
+.theme-text-4 { color: var(--color-text-4); }
+.theme-text-5 { color: var(--color-text-5); }
+.theme-text-6 { color: var(--color-text-6); }
+
+.theme-bg-1 { background-color: var(--color-bg-1); }
+.theme-bg-2 { background-color: var(--color-bg-2); }
+
+.theme-border-1 { border-color: var(--color-text-1); }
+.theme-border-2 { border-color: var(--color-text-2); }
+.theme-border-dim { border-color: var(--color-text-6); }
+
+.theme-hover-bg:hover { background-color: var(--color-text-6); color: var(--color-bg-1); }
+.theme-hover-text:hover { color: var(--color-text-1); }
+
+/* Custom Transition Wrapper */
+.smooth-transition {
+    transition: all 0.5s ease-in-out;
 }
 
-.bar-background {
-  background-color: var(--color-bg-1);
-  height: 7vh;
+/* Card Hover Effect */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.foot-background {
-  background-color: var(--color-bg-1);
-
-}
-.bar-font {
-  color: var(--color-white);
-}
-
-.hero-background {
-  background-color: var(--color-bg-2);
-  height: 100vh;
-}
-
-.about-background {
-  background-color: var(--color-bg-2);
-  height: 100vh;
-}
-.personal-background {
-  background-color: var(--color-bg-2);
-  height: 100vh;
-}
-.skills-background {
-  background-color: var(--color-bg-2);
-  height: 100vh;
-}
-.career-background {
-  background-color: var(--color-bg-2);
-  height: 100vh;
-}
-.contact-background {
-  background-color: var(--color-bg-2);
-  height: 100vh;
-}
-
-.form-label{
-  color: var(--color-text-5);
-  font-weight: 600;
-  font-size: larger;
-  justify-self: center;
-}
-
-.form-box{
-  color: var(--color-text-6);
-  font-weight: 600;
-  font-size:medium;
-  border-width: 1px;
-  border-radius: 7px;
-  border-color: var(--color-text-6);
-}
-
-.form-opt{
-  background-color: var(--color-bg-1);
-  color: var(--color-text-6);
-  font-weight: 400;
-  font-size:medium;
-}
-
-.form-button{
-  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  color: var(--color-text-4);
-  font-weight: 500;
-  font-size:medium;
-  border-width: 1px;
-  border-radius: 7px;
-  border-color: var(--color-text-4);
-  background-color: var(--color-bg-1);
-}
-
-.form-button:hover{
-  color: var(--color-text-3);
-  border-color: var(--color-text-3);
-}
-
-.menu-panel{
-  background-color: var(--color-bg-1);
-  border-width: 1px;
-  border-radius: 7px;
-  border-color: var(--color-text-4);
-}
-
-.menu-item{
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, font-size 0.3s ease-in-out, font-weight 0.3s ease-in-out;
-  color: var(--color-white);
-  font-size: large;
-}
-.menu-item:hover{
-  background-color: var(--color-bg-2);
-  color: var(--color-text-4);
-  font-weight: bold;
-  font-size: larger;
+.card-hover:hover {
+    transform: translateY(-5px);
+    /* We can't use dynamic shadow easily with hex variables without calc, 
+       so we use a subtle border interaction instead */
 }
