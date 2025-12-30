@@ -41,26 +41,31 @@
               <a
                 href="#hero"
                 class="text-sm font-medium theme-text-main hover:theme-text-1 transition-colors"
+                data-i18n="nav_home"
                 >Home</a
               >
               <a
                 href="#about"
                 class="text-sm font-medium theme-text-main hover:theme-text-1 transition-colors"
+                data-i18n="nav_about"
                 >Acerca de</a
               >
               <a
                 href="#skills"
                 class="text-sm font-medium theme-text-main hover:theme-text-1 transition-colors"
+                data-i18n="nav_skills"
                 >Habilidades</a
               >
               <a
                 href="#career"
                 class="text-sm font-medium theme-text-main hover:theme-text-1 transition-colors"
+                data-i18n="nav_career"
                 >Carrera</a
               >
               <a
                 href="#contact"
                 class="px-4 py-2 rounded-full border border-[var(--color-text-1)] theme-text-1 font-semibold hover:bg-[var(--color-text-1)] hover:text-[var(--color-bg-1)] transition-all"
+                data-i18n="nav_contact"
                 >Contáctame</a
               >
             </div>
@@ -88,26 +93,31 @@
           <a
             href="#hero"
             class="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]"
+            data-i18n="nav_home"
             >Home</a
           >
           <a
             href="#about"
             class="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]"
+            data-i18n="nav_about"
             >Acerca de</a
           >
           <a
             href="#skills"
             class="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]"
+            data-i18n="nav_skills"
             >Habilidades</a
           >
           <a
             href="#career"
             class="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]"
+            data-i18n="nav_career"
             >Carrera</a
           >
           <a
             href="#contact"
             class="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]"
+            data-i18n="nav_contact"
             >Contáctame</a
           >
         </div>
@@ -130,7 +140,10 @@
           class="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center relative z-10"
         >
           <div class="space-y-6 text-center md:text-left">
-            <p class="theme-text-2 font-mono text-lg tracking-wider">
+            <p
+              class="theme-text-2 font-mono text-lg tracking-wider"
+              data-i18n="hero_greeting"
+            >
               HI, I AM
             </p>
             <h1
@@ -143,6 +156,7 @@
             </h2>
             <p
               class="text-lg md:text-xl theme-text-main max-w-lg mx-auto md:mx-0 leading-relaxed opacity-80"
+              data-i18n="hero_desc"
             >
               Programador motivado por su pasión de aprender cosas nuevas.
               Experto en identificar problemas y preguntarle a la IA cómo
@@ -155,6 +169,7 @@
               <a
                 href="#contact"
                 class="px-8 py-3 rounded-lg theme-bg-2 theme-text-1 font-bold border border-[var(--color-text-1)] hover:bg-[var(--color-text-1)] hover:text-[var(--color-bg-1)] transition-all text-center"
+                data-i18n="hero_btn_contact"
               >
                 Contactate conmigo
               </a>
@@ -169,7 +184,6 @@
           </div>
 
           <div class="flex justify-center md:justify-end relative group">
-            <!-- Image Frame with Dynamic Border Color -->
             <div class="relative w-72 h-72 md:w-96 md:h-96">
               <div
                 class="absolute inset-0 border-2 border-[var(--color-text-3)] rounded-2xl transform translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"
@@ -177,7 +191,6 @@
               <div
                 class="absolute inset-0 theme-bg-2 rounded-2xl overflow-hidden shadow-2xl"
               >
-                <!-- Using a darker placeholder that fits themes better -->
                 <img
                   src="https://placehold.co/600x600/1a1b26/FFF?text=GV"
                   alt="Profile Placeholder"
@@ -188,7 +201,6 @@
           </div>
         </div>
 
-        <!-- Scroll Indicator -->
         <div
           class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
         >
@@ -203,49 +215,67 @@
       >
         <div class="max-w-6xl w-full">
           <div class="grid md:grid-cols-12 gap-12">
-            <!-- Title Column -->
             <div class="md:col-span-4 space-y-4">
-              <h2 class="text-5xl font-bold theme-text-1">Acerca de mi</h2>
+              <h2
+                class="text-5xl font-bold theme-text-1"
+                data-i18n="about_title"
+              >
+                Acerca de mi
+              </h2>
               <div class="h-1 w-20 theme-bg-2"></div>
               <p
                 class="theme-text-3 font-mono text-sm uppercase tracking-widest mt-4"
+                data-i18n="about_badge"
               >
                 I use Debian btw
               </p>
             </div>
 
-            <!-- Content Column -->
             <div class="md:col-span-8">
               <div
                 class="theme-bg-2 p-8 rounded-2xl border-l-4 border-[var(--color-text-2)] shadow-lg hover:shadow-2xl transition-all duration-500"
               >
                 <p class="text-lg leading-loose theme-text-main opacity-90">
-                  Empecé a programar desde temprana edad durante la pandemia de
-                  2020, donde comencé a desarrollar scripts y TUIs en Python en
-                  mi tiempo libre.
+                  <span data-i18n="about_desc_1"
+                    >Empecé a programar desde temprana edad durante la pandemia
+                    de 2020, donde comencé a desarrollar scripts y TUIs en
+                    Python en mi tiempo libre.</span
+                  >
                   <br /><br />
-                  Durante ese tiempo migré de Windows a distribuciones Linux
-                  basadas en Debian, iniciando en Elementary OS y Ubuntu hasta
-                  llegar a Debian simple (donde ahora uso Hyprland como WM).
+                  <span data-i18n="about_desc_2"
+                    >Durante ese tiempo migré de Windows a distribuciones Linux
+                    basadas en Debian, iniciando en Elementary OS y Ubuntu hasta
+                    llegar a Debian simple (donde ahora uso Hyprland como
+                    WM).</span
+                  >
                   <br /><br />
-                  He desarrollado una réplica de Tetris en C++, una base de
-                  datos NoSQL en Java y conexiones cliente/servidor. Actualmente
-                  trabajo como consultor de TI en la firma legal A&D Consultores
-                  Legales.
+                  <span data-i18n="about_desc_3"
+                    >He desarrollado una réplica de Tetris en C++, una base de
+                    datos NoSQL en Java y conexiones cliente/servidor.
+                    Actualmente trabajo como consultor de TI en la firma legal
+                    A&D Consultores Legales.</span
+                  >
                   <br /><br />
-                  <span class="theme-text-5 font-semibold">Educación:</span>
-                  Estudiante de Ingenieria de Sistemas, Universidad Nacional de
-                  Trujillo.
+                  <span
+                    class="theme-text-5 font-semibold"
+                    data-i18n="about_edu_label"
+                    >Educación:</span
+                  >
+                  <span data-i18n="about_edu_text"
+                    >Estudiante de Ingenieria de Sistemas, Universidad Nacional
+                    de Trujillo.</span
+                  >
                 </p>
               </div>
 
-              <!-- Stats or Quick Info -->
               <div class="grid grid-cols-3 gap-4 mt-8">
                 <div
                   class="text-center p-4 rounded-lg border border-[var(--color-text-6)]/20"
                 >
                   <span class="block text-3xl font-bold theme-text-2">3+</span>
-                  <span class="text-xs theme-text-6 uppercase"
+                  <span
+                    class="text-xs theme-text-6 uppercase"
+                    data-i18n="stat_years"
                     >Años Programando</span
                   >
                 </div>
@@ -253,7 +283,11 @@
                   class="text-center p-4 rounded-lg border border-[var(--color-text-6)]/20"
                 >
                   <span class="block text-3xl font-bold theme-text-3">10+</span>
-                  <span class="text-xs theme-text-6 uppercase">Proyectos</span>
+                  <span
+                    class="text-xs theme-text-6 uppercase"
+                    data-i18n="stat_projects"
+                    >Proyectos</span
+                  >
                 </div>
                 <div
                   class="text-center p-4 rounded-lg border border-[var(--color-text-6)]/20"
@@ -261,7 +295,9 @@
                   <span class="block text-3xl font-bold theme-text-4"
                     >100%</span
                   >
-                  <span class="text-xs theme-text-6 uppercase"
+                  <span
+                    class="text-xs theme-text-6 uppercase"
+                    data-i18n="stat_linux"
                     >Linux Enjoyer</span
                   >
                 </div>
@@ -277,17 +313,22 @@
         class="min-h-screen flex items-center justify-center py-20 px-6"
       >
         <div class="max-w-5xl w-full text-center">
-          <h2 class="text-5xl font-bold mb-6 theme-text-1">Habilidades</h2>
-          <p class="max-w-2xl mx-auto mb-16 theme-text-main text-lg opacity-80">
+          <h2
+            class="text-5xl font-bold mb-6 theme-text-1"
+            data-i18n="skills_title"
+          >
+            Habilidades
+          </h2>
+          <p
+            class="max-w-2xl mx-auto mb-16 theme-text-main text-lg opacity-80"
+            data-i18n="skills_desc"
+          >
             Tengo experiencia en distintos lenguajes de programación y
             tecnologías. Además, poseo la capacidad de aprender nuevas
             habilidades rápida y eficazmente.
           </p>
 
           <div class="flex flex-wrap justify-center gap-6">
-            <!-- Skill Tags with Dynamic Colors -->
-            <!-- Note: We use inline styles for borders here because we want specific colors for specific skills based on the theme palette -->
-
             <div
               class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-1)] card-hover cursor-default"
             >
@@ -297,7 +338,6 @@
               ></i>
               <span class="font-bold theme-text-main">Python</span>
             </div>
-
             <div
               class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-2)] card-hover cursor-default"
             >
@@ -307,7 +347,6 @@
               ></i>
               <span class="font-bold theme-text-main">C++</span>
             </div>
-
             <div
               class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-3)] card-hover cursor-default"
             >
@@ -317,7 +356,6 @@
               ></i>
               <span class="font-bold theme-text-main">Java</span>
             </div>
-
             <div
               class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-4)] card-hover cursor-default"
             >
@@ -327,7 +365,6 @@
               ></i>
               <span class="font-bold theme-text-main">Tailwind</span>
             </div>
-
             <div
               class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-6)] card-hover cursor-default"
             >
@@ -337,7 +374,6 @@
               ></i>
               <span class="font-bold theme-text-main">React</span>
             </div>
-
             <div
               class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-5)] card-hover cursor-default"
             >
@@ -347,7 +383,6 @@
               ></i>
               <span class="font-bold theme-text-main">MySQL</span>
             </div>
-            
             <div
               class="group px-6 py-4 rounded-xl theme-bg-2 border border-[var(--color-text-6)] card-hover cursor-default"
             >
@@ -364,30 +399,38 @@
                 data-lucide="book-open-text"
                 class="w-8 h-8 mx-auto mb-2 theme-text-3"
               ></i>
-              <span class="font-bold theme-text-main">Inglés</span>
+              <span class="font-bold theme-text-main" data-i18n="skill_english"
+                >Inglés</span
+              >
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- CAREER / PROJECTS SECTION -->
+      <!-- CAREER SECTION -->
       <section
         id="career"
         class="min-h-screen flex items-center justify-center py-20 px-6"
       >
         <div class="max-w-7xl w-full">
           <div class="mb-16">
-            <h2 class="text-5xl font-bold theme-text-1 mb-4">Carrera y Trabajo</h2>
-            <p class="theme-text-main text-xl opacity-80 max-w-2xl">
+            <h2
+              class="text-5xl font-bold theme-text-1 mb-4"
+              data-i18n="career_title"
+            >
+              Carrera y Trabajo
+            </h2>
+            <p
+              class="theme-text-main text-xl opacity-80 max-w-2xl"
+              data-i18n="career_desc"
+            >
               He desarrollado múltiples sistemas durante los años. Aquí una
               selección curada de mis mejores trabajos públicos.
             </p>
           </div>
 
-          <!-- Projects Grid -->
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project Card lenty-sunflower -->
+            <!-- Project 1 -->
             <div
               class="theme-bg-2 rounded-2xl overflow-hidden border border-[var(--color-text-6)]/30 card-hover flex flex-col h-full"
             >
@@ -403,7 +446,10 @@
                 <h3 class="text-xl font-bold mb-2 theme-text-1">
                   Portafolio Personal (lenty-sunflower)
                 </h3>
-                <p class="text-sm theme-text-main opacity-70 mb-4 flex-1">
+                <p
+                  class="text-sm theme-text-main opacity-70 mb-4 flex-1"
+                  data-i18n="proj_1_desc"
+                >
                   Un portafolio web con temas dinámicos basados en la posición
                   del scroll.
                 </p>
@@ -425,26 +471,31 @@
                   href="https://github.com/Gmatiasvc/lenty-sunflower"
                   class="inline-flex items-center gap-2 theme-text-5 hover:underline font-medium mt-auto"
                 >
-                  Ver Repositorio
+                  <span data-i18n="view_repo">Ver Repositorio</span>
                   <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                 </a>
               </div>
             </div>
-
-            <!-- Project Card golden-eagle -->
+            <!-- Project 2 -->
             <div
               class="theme-bg-2 rounded-2xl overflow-hidden border border-[var(--color-text-6)]/30 card-hover flex flex-col h-full"
             >
               <div
                 class="h-48 w-full bg-[var(--color-text-4)]/10 flex items-center justify-center"
               >
-                <img src="svg/aydlogo.svg" alt="A&D Logo" class="w-28 h-28" />
+                <i
+                  data-lucide="briefcase"
+                  class="w-16 h-16 theme-text-4 opacity-50"
+                ></i>
               </div>
               <div class="p-6 flex-1 flex flex-col">
                 <h3 class="text-xl font-bold mb-2 theme-text-1">
                   A&D sitio web (golden-eagle)
                 </h3>
-                <p class="text-sm theme-text-main opacity-70 mb-4 flex-1">
+                <p
+                  class="text-sm theme-text-main opacity-70 mb-4 flex-1"
+                  data-i18n="proj_2_desc"
+                >
                   Pagina web con React y Tailwind para A&D Consultores Legales
                 </p>
                 <div class="flex gap-2 mb-4">
@@ -461,12 +512,12 @@
                   href="https://aydlegal.vercel.app"
                   class="inline-flex items-center gap-2 theme-text-5 hover:underline font-medium mt-auto"
                 >
-                  Ir al sitio
+                  <span data-i18n="view_site">Ir al sitio</span>
                   <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                 </a>
               </div>
             </div>
-            <!-- Project Card lenty-visuals -->
+            <!-- Project 3 -->
             <div
               class="theme-bg-2 rounded-2xl overflow-hidden border border-[var(--color-text-6)]/30 card-hover flex flex-col h-full"
             >
@@ -477,9 +528,12 @@
               </div>
               <div class="p-6 flex-1 flex flex-col">
                 <h3 class="text-xl font-bold mb-2 theme-text-1">
-                  Arq. Pajares portafolio web (lenty-visuals)
+                  Arq. Pajares portafolio (lenty-visuals)
                 </h3>
-                <p class="text-sm theme-text-main opacity-70 mb-4 flex-1">
+                <p
+                  class="text-sm theme-text-main opacity-70 mb-4 flex-1"
+                  data-i18n="proj_3_desc"
+                >
                   Portafolio de la Arq. Valentina Pajares de Venegas hecho con
                   Tailwind.
                 </p>
@@ -501,13 +555,12 @@
                   href="https://valentinapajares.vercel.app"
                   class="inline-flex items-center gap-2 theme-text-5 hover:underline font-medium mt-auto"
                 >
-                  Ir al sitio
+                  <span data-i18n="view_site">Ir al sitio</span>
                   <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                 </a>
               </div>
             </div>
-
-            <!-- Project Card orchid-bank -->
+            <!-- Project 4 -->
             <div
               class="theme-bg-2 rounded-2xl overflow-hidden border border-[var(--color-text-6)]/30 card-hover flex flex-col h-full"
             >
@@ -523,7 +576,10 @@
                 <h3 class="text-xl font-bold mb-2 theme-text-1">
                   NoSQL Java DB (orchid-bank)
                 </h3>
-                <p class="text-sm theme-text-main opacity-70 mb-4 flex-1">
+                <p
+                  class="text-sm theme-text-main opacity-70 mb-4 flex-1"
+                  data-i18n="proj_4_desc"
+                >
                   Implementación de un motor de base de datos no relacional
                   desde cero utilizando Java.
                 </p>
@@ -541,13 +597,12 @@
                   href="https://github.com/Gmatiasvc/orchid-bank"
                   class="inline-flex items-center gap-2 theme-text-5 hover:underline font-medium mt-auto"
                 >
-                  Ver Repositorio
+                  <span data-i18n="view_repo">Ver Repositorio</span>
                   <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                 </a>
               </div>
             </div>
-
-            <!-- Project Card young-sprout -->
+            <!-- Project 5 -->
             <div
               class="theme-bg-2 rounded-2xl overflow-hidden border border-[var(--color-text-6)]/30 card-hover flex flex-col h-full"
             >
@@ -563,7 +618,10 @@
                 <h3 class="text-xl font-bold mb-2 theme-text-1">
                   Tetris C++ Clone (young-sprout)
                 </h3>
-                <p class="text-sm theme-text-main opacity-70 mb-4 flex-1">
+                <p
+                  class="text-sm theme-text-main opacity-70 mb-4 flex-1"
+                  data-i18n="proj_5_desc"
+                >
                   Una recreación no tan fiel del clásico juego Tetris utilizando
                   C++ y librerías gráficas básicas.
                 </p>
@@ -581,13 +639,12 @@
                   href="https://github.com/Gmatiasvc/young-sprout"
                   class="inline-flex items-center gap-2 theme-text-5 hover:underline font-medium mt-auto"
                 >
-                  Ver Repositorio
+                  <span data-i18n="view_repo">Ver Repositorio</span>
                   <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                 </a>
               </div>
             </div>
-
-            <!-- Project Card oak-reserves -->
+            <!-- Project 6 -->
             <div
               class="theme-bg-2 rounded-2xl overflow-hidden border border-[var(--color-text-6)]/30 card-hover flex flex-col h-full"
             >
@@ -601,9 +658,12 @@
               </div>
               <div class="p-6 flex-1 flex flex-col">
                 <h3 class="text-xl font-bold mb-2 theme-text-1">
-                  Client-Server Java infraestructure (oak-reserves)
+                  Client-Server Java infra (oak-reserves)
                 </h3>
-                <p class="text-sm theme-text-main opacity-70 mb-4 flex-1">
+                <p
+                  class="text-sm theme-text-main opacity-70 mb-4 flex-1"
+                  data-i18n="proj_6_desc"
+                >
                   Implementación de un notor de conexión cliente-servidor en
                   java con posibilidad de multiples conexiones.
                 </p>
@@ -625,7 +685,7 @@
                   href="https://github.com/Gmatiasvc/oak-reserves"
                   class="inline-flex items-center gap-2 theme-text-5 hover:underline font-medium mt-auto"
                 >
-                  Ver Repositorio
+                  <span data-i18n="view_repo">Ver Repositorio</span>
                   <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                 </a>
               </div>
@@ -640,14 +700,26 @@
         class="min-h-screen flex items-center justify-center py-20 px-6"
       >
         <div class="max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
-          <!-- Contact Info -->
           <div class="space-y-8">
             <div>
-              <h2 class="text-5xl font-bold theme-text-1 mb-2">CONTACTAME</h2>
-              <h3 class="text-2xl font-medium theme-text-2">¿Alguna duda?</h3>
+              <h2
+                class="text-5xl font-bold theme-text-1 mb-2"
+                data-i18n="contact_title"
+              >
+                CONTACTAME
+              </h2>
+              <h3
+                class="text-2xl font-medium theme-text-2"
+                data-i18n="contact_subtitle"
+              >
+                ¿Alguna duda?
+              </h3>
             </div>
 
-            <p class="theme-text-main text-lg opacity-80 leading-relaxed">
+            <p
+              class="theme-text-main text-lg opacity-80 leading-relaxed"
+              data-i18n="contact_desc"
+            >
               Estoy siempre abierto a discutir nuevos proyectos, ideas creativas
               o oportunidades para ser parte de tus proyectos.
             </p>
@@ -669,7 +741,7 @@
                   </p>
                 </div>
               </a>
-
+              <!-- More contact links can stay as is or be localized if text is added -->
               <a
                 href="https://github.com/Gmatiasvc"
                 class="flex items-center gap-4 p-4 rounded-xl theme-bg-2 border border-[var(--color-text-6)]/20 hover:border-[var(--color-text-6)] transition-colors group"
@@ -684,7 +756,6 @@
                   <p class="font-medium theme-text-main">@Gmatiasvc</p>
                 </div>
               </a>
-
               <a
                 href="https://www.instagram.com/gerarditochiquitito/"
                 class="flex items-center gap-4 p-4 rounded-xl theme-bg-2 border border-[var(--color-text-6)]/20 hover:border-[var(--color-text-6)] transition-colors group"
@@ -704,7 +775,6 @@
             </div>
           </div>
 
-          <!-- Form -->
           <div
             class="theme-bg-2 p-8 rounded-3xl shadow-2xl border border-[var(--color-text-6)]/20"
           >
@@ -713,6 +783,7 @@
                 <label
                   for="email"
                   class="block text-sm font-medium theme-text-5 mb-2"
+                  data-i18n="form_email"
                   >Correo Electrónico</label
                 >
                 <input
@@ -728,21 +799,23 @@
                   <label
                     for="subject"
                     class="block text-sm font-medium theme-text-5 mb-2"
+                    data-i18n="form_subject"
                     >Asunto</label
                   >
                   <select
                     id="subject"
                     class="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-1)] border border-[var(--color-text-6)] text-[var(--color-white)] focus:outline-none focus:ring-2 focus:ring-[var(--color-text-5)] transition-all appearance-none"
                   >
-                    <option>General</option>
-                    <option>Freelance</option>
-                    <option>Trabajo</option>
+                    <option data-i18n="opt_general">General</option>
+                    <option data-i18n="opt_freelance">Freelance</option>
+                    <option data-i18n="opt_job">Trabajo</option>
                   </select>
                 </div>
                 <div>
                   <label
                     for="loc"
                     class="block text-sm font-medium theme-text-5 mb-2"
+                    data-i18n="form_location"
                     >Ubicación</label
                   >
                   <select
@@ -760,12 +833,12 @@
                 <label
                   for="message"
                   class="block text-sm font-medium theme-text-5 mb-2"
+                  data-i18n="form_message"
                   >Mensaje</label
                 >
                 <textarea
                   id="message"
                   rows="4"
-                  placeholder="Escribe tu mensaje aquí..."
                   class="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-1)] border border-[var(--color-text-6)] text-[var(--color-white)] focus:outline-none focus:ring-2 focus:ring-[var(--color-text-5)] transition-all resize-none"
                 ></textarea>
               </div>
@@ -774,6 +847,7 @@
                 <button
                   type="submit"
                   class="flex-1 py-3 px-6 rounded-lg theme-bg-1 theme-text-4 font-bold border border-[var(--color-text-4)] hover:bg-[var(--color-text-4)] hover:text-[var(--color-bg-1)] transition-all"
+                  data-i18n="form_btn_send"
                 >
                   Enviar Mensaje
                 </button>
@@ -799,7 +873,7 @@
         >
           <div>
             <h3 class="text-xl font-bold theme-text-1">Gerardo Venegas</h3>
-            <p class="theme-text-main opacity-60 mt-2">
+            <p class="theme-text-main opacity-60 mt-2" data-i18n="footer_text">
               Diseñado y desarrollado con ❤️ y mucha Pilsen Trujillo.
             </p>
           </div>
@@ -822,7 +896,63 @@
     >
       <i data-lucide="sun-moon" class="w-6 h-6"></i>
     </button>
-    
+
+    <!-- LANGUAGE MENU CONTAINER -->
+    <div
+      id="language-menu"
+      class="hidden fixed bottom-24 left-6 z-50 rounded-xl overflow-hidden shadow-2xl theme-bg-2 border border-[var(--color-text-6)]/20 min-w-[150px]"
+    >
+      <div class="flex flex-col p-2 space-y-1">
+        <button
+          onclick="changeLanguage('es')"
+          class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-[var(--color-text-6)]/10 theme-text-main hover:theme-text-6 transition-colors text-left"
+        >
+          <span class="text-xl">🇪🇸</span>
+          <span class="font-medium">Español</span>
+        </button>
+        <button
+          onclick="changeLanguage('it')"
+          class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-[var(--color-text-6)]/10 theme-text-main hover:theme-text-6 transition-colors text-left"
+        >
+          <span class="text-xl">🇮🇹</span>
+          <span class="font-medium">Italiano</span>
+        </button>
+        <button
+          onclick="changeLanguage('cn')"
+          class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-[var(--color-text-6)]/10 theme-text-main hover:theme-text-6 transition-colors text-left"
+        >
+          <span class="text-xl">🇨🇳</span> <span class="font-medium">中文</span>
+        </button>
+        <button
+          onclick="changeLanguage('en')"
+          class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-[var(--color-text-6)]/10 theme-text-main hover:theme-text-6 transition-colors text-left"
+        >
+          <span class="text-xl">🇺🇸</span>
+          <span class="font-medium">English</span>
+        </button>
+        <button
+          onclick="changeLanguage('fr')"
+          class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-[var(--color-text-6)]/10 theme-text-main hover:theme-text-6 transition-colors text-left"
+        >
+          <span class="text-xl">🇫🇷</span>
+          <span class="font-medium">Français</span>
+        </button>
+        <button
+          onclick="changeLanguage('cn')"
+          class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-[var(--color-text-6)]/10 theme-text-main hover:theme-text-6 transition-colors text-left"
+        >
+          <span class="text-xl">🇨🇳</span> <span class="font-medium">中文</span>
+        </button>
+        <button
+          onclick="changeLanguage('jp')"
+          class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-[var(--color-text-6)]/10 theme-text-main hover:theme-text-6 transition-colors text-left"
+        >
+          <span class="text-xl">🇯🇵</span>
+          <span class="font-medium">日本語</span>
+        </button>
+      </div>
+    </div>
+
     <!-- LANGUAGE BUTTON -->
     <button
       id="language-toggle"

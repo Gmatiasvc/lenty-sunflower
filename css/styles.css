@@ -22,11 +22,6 @@ h1, h2, h3, h4, h5, h6, .display-font {
     border-radius: 4px;
 }
 
-/* --- THEME VARIABLE LOGIC (PRESERVED) --- */
-/* These variables are read by the JS Observer to update the :root.
-   The values are exactly as provided in your original CSS.
-*/
-
 :root {
     --color-bg-1: #1c1d21;
     --color-bg-2: #1c1d21;
@@ -43,12 +38,12 @@ h1, h2, h3, h4, h5, h6, .display-font {
 /* --- SECTION PALETTES --- */
 #hero {
     --dark-bg-1: #1a1b26;
-    --dark-bg-2: #24283b; /* Used for Cards/Containers */
+    --dark-bg-2: #24283b; 
     --dark-text: #cfc9c2;
-    --dark-text-1: #e0af68; /* Gold */
-    --dark-text-2: #9ece6a; /* Green */
-    --dark-text-3: #f7768e; /* Red */
-    --dark-text-4: #bb9af7; /* Purple */
+    --dark-text-1: #e0af68; 
+    --dark-text-2: #9ece6a; 
+    --dark-text-3: #f7768e; 
+    --dark-text-4: #bb9af7; 
     --dark-text-5: #9aa5ce;
     --dark-text-6: #5aa9e6;
     --dark-hyperlink: #7dcfff;
@@ -162,13 +157,9 @@ h1, h2, h3, h4, h5, h6, .display-font {
 }
 
 #footer {
-   /* Inherits from contact usually, but explicitly defined as requested */
-   --dark-bg-1: #191619; /* Slightly darker than contact */
+   --dark-bg-1: #191619; 
    --light-bg-1: #f2f2f2;
 }
-
-/* --- DYNAMIC UTILITIES --- */
-/* These classes use the CSS variables that change on scroll */
 
 .theme-text-main { color: var(--color-white); }
 .theme-text-1 { color: var(--color-text-1); }
@@ -188,17 +179,21 @@ h1, h2, h3, h4, h5, h6, .display-font {
 .theme-hover-bg:hover { background-color: var(--color-text-6); color: var(--color-bg-1); }
 .theme-hover-text:hover { color: var(--color-text-1); }
 
-/* Custom Transition Wrapper */
-.smooth-transition {
-    transition: all 0.5s ease-in-out;
-}
+.smooth-transition { transition: all 0.5s ease-in-out; }
+.card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-hover:hover { transform: translateY(-5px); }
 
-/* Card Hover Effect */
-.card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+#language-menu {
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
-.card-hover:hover {
-    transform: translateY(-5px);
-    /* We can't use dynamic shadow easily with hex variables without calc, 
-       so we use a subtle border interaction instead */
+#language-menu.hidden {
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+  visibility: hidden;
+  display: block !important; 
+}
+#language-menu:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
 }
