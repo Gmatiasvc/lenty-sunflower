@@ -434,7 +434,7 @@ const LanguageSwitcher = ({ setLang, currentLang }: { setLang: (l: Language) => 
   };
 
   return (
-    <div className="fixed bottom-24 left-6 z-50">
+    <div className="fixed bottom-10 left-10 z-50">
       {/* Botón flotante para abrir menú */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
@@ -490,7 +490,7 @@ function App() {
       {/* Botón Flotante de Tema */}
       <button
         onClick={toggleTheme}
-        className="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-[var(--color-white)] text-[var(--color-bg-1)] shadow-2xl hover:scale-110 transition-transform duration-200 border-2 border-[var(--color-bg-1)] cursor-pointer"
+        className="fixed bottom-10 right-10 z-50 p-4 rounded-full bg-[var(--color-white)] text-[var(--color-bg-1)] shadow-2xl hover:scale-110 transition-transform duration-200 border-2 border-[var(--color-bg-1)] cursor-pointer"
         aria-label="Toggle Theme"
       >
          {currentTheme === 'dark' ? '☀️' : '🌙'}
