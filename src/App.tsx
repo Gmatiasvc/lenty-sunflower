@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/next"
 // 1. Importamos todos los iconos necesarios
 import { 
   Menu, Github, ArrowDown, Code2, Cpu, Coffee, Palette, 
@@ -500,6 +501,7 @@ function App() {
 
       {/* Selector de Idioma Flotante */}
       <LanguageSwitcher setLang={setLang} currentLang={lang} />
+      <Analytics/>
     </div>
   );
 }
