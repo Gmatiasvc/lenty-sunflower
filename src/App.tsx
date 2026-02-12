@@ -27,10 +27,10 @@ const Navbar = ({ t }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-[var(--color-bg-1)]/80 border-b border-[var(--color-text-6)]/20">
+    <nav className="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-(--color-bg-1)/80 border-b border-(--color-text-6)/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <a href="#hero" className="text-2xl font-bold tracking-tighter theme-text-1 hover:opacity-80 transition-opacity">
               GV<span className="theme-text-2">.</span>
             </a>
@@ -51,7 +51,8 @@ const Navbar = ({ t }: NavbarProps) => {
               <a href="#career" className="text-sm font-medium theme-text-main hover:theme-text-1 transition-colors">
                 {t.nav_career}
               </a>
-              <a href="#contact" className="px-4 py-2 rounded-full border border-[var(--color-text-1)] theme-text-1 font-semibold hover:bg-[var(--color-text-1)] hover:text-[var(--color-bg-1)] transition-all">
+              <a href="#contact" className="px-4 py-2 rounded-full border border-(--color-text-1) theme-text-1 font-semibold hover:bg-(--color-text-1) 
+               transition-all">
                 {t.nav_contact}
               </a>
             </div>
@@ -70,23 +71,22 @@ const Navbar = ({ t }: NavbarProps) => {
         </div>
       </div>
 
-      {/* */}
       {isOpen && (
-        <div className="md:hidden absolute w-full theme-bg-2 border-b border-[var(--color-text-6)] shadow-xl">
+        <div className="md:hidden absolute w-full theme-bg-2 border-b border-(--color-text-6) shadow-xl">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#hero" className="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]" onClick={() => setIsOpen(false)}>
+            <a href="#hero" className="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-(--color-bg-1)" onClick={() => setIsOpen(false)}>
               {t.nav_home}
             </a>
-            <a href="#about" className="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]" onClick={() => setIsOpen(false)}>
+            <a href="#about" className="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-(--color-bg-1)" onClick={() => setIsOpen(false)}>
               {t.nav_about}
             </a>
-            <a href="#skills" className="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]" onClick={() => setIsOpen(false)}>
+            <a href="#skills" className="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-(--color-bg-1)" onClick={() => setIsOpen(false)}>
               {t.nav_skills}
             </a>
-            <a href="#career" className="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]" onClick={() => setIsOpen(false)}>
+            <a href="#career" className="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-(--color-bg-1)" onClick={() => setIsOpen(false)}>
               {t.nav_career}
             </a>
-            <a href="#contact" className="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-[var(--color-bg-1)]" onClick={() => setIsOpen(false)}>
+            <a href="#contact" className="block px-3 py-2 rounded-md text-base font-medium theme-text-main hover:bg-(--color-bg-1)" onClick={() => setIsOpen(false)}>
               {t.nav_contact}
             </a>
           </div>
@@ -99,8 +99,8 @@ const Navbar = ({ t }: NavbarProps) => {
 const Hero = ({ t }: ComponentProps) => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
-      {/* */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--color-text-6)] rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-(--color-text-6) rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
 
       <div className="max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="space-y-6 text-center md:text-left">
@@ -118,10 +118,10 @@ const Hero = ({ t }: ComponentProps) => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
-            <a href="#contact" className="px-8 py-3 rounded-lg theme-bg-2 theme-text-1 font-bold border border-[var(--color-text-1)] hover:bg-[var(--color-text-1)] hover:text-[var(--color-bg-1)] transition-all text-center">
+            <a href="#contact" className="px-8 py-3 rounded-lg theme-bg-2 theme-text-1 font-bold border border-(--color-text-1) hoverhover:bg-(--color-text-1)r:text-[var(--color-bg-1)] transition-all text-center">
               {t.hero_btn_contact}
             </a>
-            <a href="https://github.com/Gmatiasvc" target="_blank" className="px-8 py-3 rounded-lg border border-[var(--color-text-6)] theme-text-6 hover:bg-[var(--color-text-6)] hover:text-[var(--color-bg-1)] transition-all flex items-center justify-center gap-2">
+            <a href="https://github.com/Gmatiasvc" target="_blank" className="px-8 py-3 rounded-lg border border-(--color-text-6) theme-text-6 hover:bg-(--color-text-6) hover:text-(--color-bg-1) transition-all flex items-center justify-center gap-2">
               <Github className="w-5 h-5" /> GitHub
             </a>
           </div>
@@ -129,7 +129,7 @@ const Hero = ({ t }: ComponentProps) => {
 
         <div className="flex justify-center md:justify-end relative group">
           <div className="relative w-72 h-72 md:w-96 md:h-96">
-            <div className="absolute inset-0 border-2 border-[var(--color-text-3)] rounded-2xl transform translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
+            <div className="absolute inset-0 border-2 border-(--color-text-3) rounded-2xl transform translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
             <div className="absolute inset-0 theme-bg-2 rounded-2xl overflow-hidden shadow-2xl">
               {/* Ajusta la ruta de la imagen según corresponda, si está en public usa /img/... */}
               <img src="/img/important.png" alt="Profile" className="w-full h-full object-cover grayscale" />
@@ -161,7 +161,7 @@ const About = ({ t }: ComponentProps) => {
           </div>
 
           <div className="md:col-span-8">
-            <div className="theme-bg-2 p-8 rounded-2xl border-l-4 border-[var(--color-text-2)] shadow-lg hover:shadow-2xl transition-all duration-500">
+            <div className="theme-bg-2 p-8 rounded-2xl border-l-4 border-(--color-text-2) shadow-lg hover:shadow-2xl transition-all duration-500">
               <p className="text-lg leading-loose theme-text-main opacity-90">
                 <span>{t.about_desc_1}</span>
                 <br /><br />
@@ -175,15 +175,15 @@ const About = ({ t }: ComponentProps) => {
             </div>
 
             <div className="grid grid-cols-3 gap-4 mt-8">
-              <div className="text-center p-4 rounded-lg border border-[var(--color-text-6)]/20">
+              <div className="text-center p-4 rounded-lg border border-(--color-text-6)/20">
                 <span className="block text-3xl font-bold theme-text-2">3+</span>
                 <span className="text-xs theme-text-6 uppercase">{t.stat_years}</span>
               </div>
-              <div className="text-center p-4 rounded-lg border border-[var(--color-text-6)]/20">
+              <div className="text-center p-4 rounded-lg border border-(--color-text-6)/20">
                 <span className="block text-3xl font-bold theme-text-3">10+</span>
                 <span className="text-xs theme-text-6 uppercase">{t.stat_projects}</span>
               </div>
-              <div className="text-center p-4 rounded-lg border border-[var(--color-text-6)]/20">
+              <div className="text-center p-4 rounded-lg border border-(--color-text-6)/20">
                 <span className="block text-3xl font-bold theme-text-4">100%</span>
                 <span className="text-xs theme-text-6 uppercase">{t.stat_linux}</span>
               </div>
@@ -307,7 +307,7 @@ const Career = ({ t }: ComponentProps) => {
 
 // Componente auxiliar para Projectos
 const ProjectCard = ({ icon, title, desc, tags, link, linkText, bgColor }: any) => (
-  <div className="theme-bg-2 rounded-2xl overflow-hidden border border-[var(--color-text-6)]/30 card-hover flex flex-col h-full">
+  <div className="theme-bg-2 rounded-2xl overflow-hidden border border-(--color-text-6)/30 card-hover flex flex-col h-full">
     <div className={`h-48 w-full ${bgColor} flex items-center justify-center`}>
       {icon}
     </div>
@@ -316,7 +316,7 @@ const ProjectCard = ({ icon, title, desc, tags, link, linkText, bgColor }: any) 
       <p className="text-sm theme-text-main opacity-70 mb-4 flex-1">{desc}</p>
       <div className="flex gap-2 mb-4">
         {tags.map((tag: string) => (
-          <span key={tag} className="text-xs px-2 py-1 rounded theme-bg-1 theme-text-4 border border-[var(--color-text-4)]/30">{tag}</span>
+          <span key={tag} className="text-xs px-2 py-1 rounded theme-bg-1 theme-text-4 border border-(--color-text-4)/30">{tag}</span>
         ))}
       </div>
       <a href={link} className="inline-flex items-center gap-2 theme-text-5 hover:underline font-medium mt-auto">
@@ -348,17 +348,17 @@ const Contact = ({ t }: ComponentProps) => {
           </div>
         </div>
 
-        <div className="theme-bg-2 p-8 rounded-3xl shadow-2xl border border-[var(--color-text-6)]/20">
+        <div className="theme-bg-2 p-8 rounded-3xl shadow-2xl border border-(--color-text-6)/20">
           <form action="#" className="space-y-6">
             <div>
               <label htmlFor="email" className="block text-sm font-medium theme-text-5 mb-2">{t.form_email}</label>
-              <input type="email" id="email" placeholder="tu@email.com" className="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-1)] border border-[var(--color-text-6)] text-[var(--color-white)] focus:outline-none focus:ring-2 focus:ring-[var(--color-text-5)] transition-all" />
+              <input type="email" id="email" placeholder="tu@email.com" className="w-full px-4 py-3 rounded-lg bg-(--color-bg-1) border border-(--color-text-6) text-white focus:outline-none focus:ring-2 focus:ring-(--color-text-5) transition-all" />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium theme-text-5 mb-2">{t.form_subject}</label>
-                <select id="subject" className="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-1)] border border-[var(--color-text-6)] text-[var(--color-white)] focus:outline-none focus:ring-2 focus:ring-[var(--color-text-5)] transition-all appearance-none">
+                <select id="subject" className="w-full px-4 py-3 rounded-lg bg-(--color-bg-1) border border-(--color-text-6) text-white focus:outline-none focus:ring-2 focus:ring-(--color-text-5) transition-all appearance-none">
                   <option>{t.opt_general}</option>
                   <option>{t.opt_freelance}</option>
                   <option>{t.opt_job}</option>
@@ -366,7 +366,7 @@ const Contact = ({ t }: ComponentProps) => {
               </div>
               <div>
                 <label htmlFor="loc" className="block text-sm font-medium theme-text-5 mb-2">{t.form_location}</label>
-                <select id="loc" className="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-1)] border border-[var(--color-text-6)] text-[var(--color-white)] focus:outline-none focus:ring-2 focus:ring-[var(--color-text-5)] transition-all appearance-none">
+                <select id="loc" className="w-full px-4 py-3 rounded-lg bg-(--color-bg-1) border border-(--color-text-6) text-white focus:outline-none focus:ring-2 focus:ring-(--color-text-5) transition-all appearance-none">
                   <option>Perú</option>
                   <option>Latam</option>
                   <option>Global</option>
@@ -376,14 +376,14 @@ const Contact = ({ t }: ComponentProps) => {
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium theme-text-5 mb-2">{t.form_message}</label>
-              <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-lg bg-[var(--color-bg-1)] border border-[var(--color-text-6)] text-[var(--color-white)] focus:outline-none focus:ring-2 focus:ring-[var(--color-text-5)] transition-all resize-none"></textarea>
+              <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-lg bg-(--color-bg-1) border border-(--color-text-6) text-white focus:outline-none focus:ring-2 focus:ring-(--color-text-5) transition-all resize-none"></textarea>
             </div>
 
             <div className="flex gap-4 pt-2">
-              <button type="submit" className="flex-1 py-3 px-6 rounded-lg theme-bg-1 theme-text-4 font-bold border border-[var(--color-text-4)] hover:bg-[var(--color-text-4)] hover:text-[var(--color-bg-1)] transition-all">
+              <button type="submit" className="flex-1 py-3 px-6 rounded-lg theme-bg-1 theme-text-4 font-bold border border-(--color-text-4) hover:bg-(--color-text-4) hover:text-(--color-bg-1) transition-all">
                 {t.form_btn_send}
               </button>
-              <button type="reset" className="px-6 rounded-lg theme-text-6 border border-[var(--color-text-6)] hover:bg-[var(--color-text-6)] hover:text-[var(--color-bg-1)] transition-all">
+              <button type="reset" className="px-6 rounded-lg theme-text-6 border border-(--color-text-6) hover:bg-(--color-text-6) hover:text-(--color-bg-1) transition-all">
                 <RefreshCw className="w-5 h-5" />
               </button>
             </div>
@@ -395,8 +395,8 @@ const Contact = ({ t }: ComponentProps) => {
 };
 
 const ContactLink = ({ href, icon, title, text }: any) => (
-  <a href={href} className="flex items-center gap-4 p-4 rounded-xl theme-bg-2 border border-[var(--color-text-6)]/20 hover:border-[var(--color-text-6)] transition-colors group">
-    <div className="p-3 rounded-full bg-[var(--color-bg-1)] theme-text-6 group-hover:theme-text-1 transition-colors">
+  <a href={href} className="flex items-center gap-4 p-4 rounded-xl theme-bg-2 border border-(--color-text-6)/20 hover:border-(--color-text-6) transition-colors group">
+    <div className="p-3 rounded-full bg-(--color-bg-1) theme-text-6 group-hover:theme-text-1 transition-colors">
       {icon}
     </div>
     <div>
@@ -408,7 +408,7 @@ const ContactLink = ({ href, icon, title, text }: any) => (
 
 const Footer = ({ t }: ComponentProps) => {
   return (
-    <footer id="footer" className="py-12 border-t border-[var(--color-text-6)]/20 theme-bg-1">
+    <footer id="footer" className="py-12 border-t border-(--color-text-6)/20 theme-bg-1">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h3 className="text-xl font-bold theme-text-1">Gerardo Venegas</h3>
@@ -427,7 +427,7 @@ const Footer = ({ t }: ComponentProps) => {
 };
 
 // Componente para seleccionar idioma (Reemplaza a Lang y LangBtn)
-const LanguageSwitcher = ({ setLang, currentLang }: { setLang: (l: Language) => void, currentLang: Language }) => {
+const LanguageSwitcher = ({ setLang }: { setLang: (l: Language) => void, currentLang: Language }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLangChange = (lang: Language) => {
@@ -440,14 +440,14 @@ const LanguageSwitcher = ({ setLang, currentLang }: { setLang: (l: Language) => 
       {/* Botón flotante para abrir menú */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="p-4 rounded-full bg-[var(--color-white)] text-[var(--color-bg-1)] shadow-2xl hover:scale-110 transition-transform duration-200 border-2 border-[var(--color-bg-1)]"
+        className="p-4 rounded-full bg-white text-(--color-bg-1) shadow-2xl hover:scale-110 transition-transform duration-200 border-2 border-(--color-bg-1)"
       >
         <Globe className="w-6 h-6" />
       </button>
 
       {/* Menú desplegable */}
       {isOpen && (
-        <div className="absolute bottom-16 left-0 mb-4 rounded-xl overflow-hidden shadow-2xl theme-bg-2 border border-[var(--color-text-6)]/20 min-w-[150px]">
+        <div className="absolute bottom-16 left-0 mb-4 rounded-xl overflow-hidden shadow-2xl theme-bg-2 border border-(--color-text-6)/20 min-w-37.5">
           <div className="flex flex-col p-2 space-y-1">
             <LangOption flag="🇪🇸" name="Español" onClick={() => handleLangChange('es')} />
             <LangOption flag="🇺🇸" name="English" onClick={() => handleLangChange('en')} />
@@ -464,7 +464,7 @@ const LanguageSwitcher = ({ setLang, currentLang }: { setLang: (l: Language) => 
 };
 
 const LangOption = ({ flag, name, onClick }: any) => (
-  <button onClick={onClick} className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-[var(--color-text-6)]/10 theme-text-main hover:theme-text-6 transition-colors text-left">
+  <button onClick={onClick} className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-(--color-text-6)/10 theme-text-main hover:theme-text-6 transition-colors text-left">
     <span className="text-xl">{flag}</span>
     <span className="font-medium">{name}</span>
   </button>
@@ -492,7 +492,7 @@ function App() {
       {/* Botón Flotante de Tema */}
       <button
         onClick={toggleTheme}
-        className="fixed bottom-10 right-10 z-50 p-4 rounded-full bg-[var(--color-white)] text-[var(--color-bg-1)] shadow-2xl hover:scale-110 transition-transform duration-200 border-2 border-[var(--color-bg-1)] cursor-pointer"
+        className="fixed bottom-10 right-10 z-50 p-4 rounded-full bg-white text-(--color-bg-1) shadow-2xl hover:scale-110 transition-transform duration-200 border-2 border-(--color-bg-1) cursor-pointer"
         aria-label="Toggle Theme"
       >
          {currentTheme === 'dark' ? <Sun className="h-6 w-6"/> : <Moon className="h-6 w-6"/> }
