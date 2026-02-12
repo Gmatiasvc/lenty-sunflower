@@ -4,7 +4,9 @@ import {
   Menu, Github, ArrowDown, Code2, Cpu, Coffee, Palette, 
   Database, Terminal, BookOpenText, FolderGit2, Briefcase, 
   Building2, DatabaseZap, TerminalSquare, Cable, ArrowUpRight, 
-  Mail, Instagram, RefreshCw, Globe 
+  Mail, Instagram, RefreshCw, Globe, 
+  Sun,
+  Moon
 } from "lucide-react";
 
 import { translations, type Language, type TranslationKeys } from './data/translations';
@@ -493,7 +495,7 @@ function App() {
         className="fixed bottom-10 right-10 z-50 p-4 rounded-full bg-[var(--color-white)] text-[var(--color-bg-1)] shadow-2xl hover:scale-110 transition-transform duration-200 border-2 border-[var(--color-bg-1)] cursor-pointer"
         aria-label="Toggle Theme"
       >
-         {currentTheme === 'dark' ? '☀️' : '🌙'}
+         {currentTheme === 'dark' ? <Sun className="h-6 w-6"/> : <Moon className="h-6 w-6"/> }
       </button>
 
       {/* Selector de Idioma Flotante */}
